@@ -1,0 +1,571 @@
+@import "null.scss";
+
+$monts: 'Montserrat Alternates', sans-serif;
+
+$sans: 'Open Sans', sans-serif;
+
+// Для приветственной страницы
+
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.container__hello{
+    max-width: 1805px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.d-flex{
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -ms-flex;
+}
+
+//body{
+//    background: url("../img/parallax-1/bgParallax1.jpg");
+//    background-repeat: no-repeat;
+//    background-size: cover;
+//    width: 100%;
+//}
+.logoBox{
+    display: flex;
+    align-items: center;
+    .logo{
+    width: 91px;
+    height: 91px;
+}
+    a{
+  font-size: 44px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.59;
+  letter-spacing: 1.1px;
+  color: #ffffff;
+    }
+}
+
+
+
+.parallax{
+    height: 100vh;
+    position: relative;
+    &__mountain{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left: 0;
+        &_1{
+            background: url("../img/parallax-1/bgParallax1.jpg") 0 0 / cover no-repeat;
+        }
+        &_2{
+            z-index: 4;
+            background: url("../img/parallax-1/m_2.png") bottom right / 45% no-repeat;
+        }
+        &_3{
+            z-index: 4;
+            background: url("../img/parallax-1/m_3.png") left bottom / 100% no-repeat;
+        }
+    }
+    &__fog{
+        background: url("../img/parallax-1/fog_1.png") bottom / 100% no-repeat;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 4;
+    }
+}
+
+.header{
+    &__inner{
+        height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $monts;
+}
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    text-transform: uppercase;
+    &__item{
+        padding-right: 30px;
+        &:last-child{
+            padding-right: 0px;
+        }
+        a{
+           font-size: 28px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 0.93;
+      letter-spacing: 0.7px;
+      color: #000;
+        transition: .3s all ease;
+            &:hover{
+              color: #ffcb57;   
+            }
+        }      
+    }
+}
+// Контент
+.content{
+    .content__inner{
+        background: rgba(0, 0, 0, .3);
+        font-family: $sans;
+    }
+}
+
+.left, .right{
+        width: 50%;
+        position: relative;
+    }
+    .btn{
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  color: #ffffff;
+    text-transform: uppercase;
+        background: #e56565;
+        padding: 20px;
+        border-radius: 5px;
+        transition: .3s all ease;
+        &:hover{
+            box-shadow: 0px 9px 62px 0 rgba(229, 101, 101, 0.7);
+        }
+    }
+
+//Левая часть контента
+.left{
+    justify-content: center;
+    align-items: center;
+        background: linear-gradient(to top, rgba(94, 40, 166, .04), rgba(82, 25, 158, .04)), linear-gradient(to bottom, rgba(0, 0, 0, .04), rgba(0, 0, 0, .04));
+        height: 80vh;
+    &__body{
+        margin-left: 53px;
+    }
+    &__title{
+        text-transform: uppercase;
+        font-size: 40px;
+        color: #fff;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1;
+          letter-spacing: 1.38px;
+        margin-bottom: 100px;
+        flex-direction: column;
+        span{
+            text-align: center;
+            
+        }
+    }
+    &__btn{
+        margin-left: 110px;
+    }
+}
+//Правая часть контента
+
+.right{
+    &__inner{
+      
+    }
+    &__ellips{
+        background: url("../img/parallax-2/ellipse.png") no-repeat center / contain;
+        width: 75%;
+        height: 75%;
+        bottom: 5%;
+        left: 7%;
+        position: absolute;
+        z-index: 2;
+    }
+    &__arrows{
+        background: url("../img/parallax-2/arrows.png") no-repeat center / contain;
+        width: 15%;
+        height: 20%;
+        bottom: 5%;
+        left: 80%;
+        position: absolute;
+    }
+    &__zigzag{
+        background: url("../img/parallax-2/zigzag.png") no-repeat center / contain;
+        width: 25%;
+        height: 25%;
+        left: 65%;
+        position: absolute;
+    }
+    &__builder{
+        background: url("../img/parallax-2/Builder.png") no-repeat center / contain;
+        width: 110%;
+        height: 108%;
+        left: 7%;
+        position: absolute;
+        z-index: 3;
+    }
+    &__rectangle{
+        background: url("../img/parallax-2/rectangle.png") no-repeat center / contain;
+        width: 20%;
+        height: 75%;
+        top: 25%;
+        left: -20%;
+        position: absolute;
+    }
+    &__hammer{
+        background: url("../img/parallax-2/hammer.png") no-repeat center / contain;
+        width: 35%;
+        height: 75%;
+        top: 3%;
+        left: 3%;
+        z-index: 1;
+        position: absolute;
+    }
+    &__handsaw{
+        background: url("../img/parallax-2/handSaw.png") no-repeat center / contain;
+        width: 65%;
+        height: 85%;
+        top: 35%;
+        left: -20%;
+        z-index: 1;
+        position: absolute;
+    }
+}
+.burger{
+    transition: .3s all ease;
+    visibility: hidden;
+    span{
+        display: block;
+        width: 30px;
+        position: relative;
+        height: 3px;
+        background-color: black;
+        border-radius: 5px;
+        &:after,&:before{
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background-color: black;
+            border-radius: 5px;
+            transition: .4s all ease;
+        }
+        &:after{
+            top: 10px;
+        }
+        &:before{
+            top:-10px;
+        }
+    }
+}
+//.icon-burger{
+//    color: white;
+//    font-size: 50px;
+//    visibility: hidden;
+//}
+
+
+
+@media(max-width:1638px){
+    .logoBox{
+
+    .logo{
+    width: 85px;
+    height: 85px;
+}
+    a{
+  font-size: 39px;
+
+    }
+}
+.menu{
+
+    &__item{
+        padding-right: 25px;
+        a{
+           font-size: 20px;
+        }      
+    }
+}
+}
+@media(max-width:1282px){
+        .logoBox{
+
+    .logo{
+    width: 70px;
+    height: 70px;
+}
+    a{
+  font-size: 30px;
+
+    }
+}
+.menu{
+
+    &__item{
+        padding-right: 25px;
+        a{
+           font-size: 15px;
+        }      
+    }
+}
+    
+    .left{
+    justify-content: flex-start;
+    align-items: center;
+    &__body{
+        margin-left: 10px;
+    }
+    &__title{
+        text-transform: uppercase;
+        font-size: 40px;
+        margin-bottom: 100px;
+        display: block;
+        span{
+            text-align: center;
+            
+        }
+    }
+    &__btn{
+        margin-left: 110px;
+    }
+}
+}
+
+@media(max-width:1028px){
+       .logoBox{
+    padding-top: 10px;
+           align-self: flex-start;
+    .logo{
+    width: 100px;
+    height: 100px;
+}
+    a{
+  font-size: 50px;
+
+    }
+}
+    .header{
+     
+    &__inner{
+        height: 15vh;
+        flex-direction: column;
+        align-items: center;
+    justify-content: space-between;
+    font-family: $monts;
+}
+}
+    .burger{
+        visibility: visible;
+          margin-left: 100%;
+    }
+    .close{   
+        width: 30px;
+        span{
+            width: 0px;
+            height: 2px;
+            visibility: hidden;
+            transition: .4s all ease;
+            &:after, &:before{
+                transition: .4s all ease;
+                visibility: visible;
+            }
+            &:after{
+                transform: rotate(45deg);
+                top: -2%;
+            }
+            &:before{
+                transform: rotate(-45deg);
+                top: 2%;
+            }
+        }
+    }
+    .icon-burger{
+        visibility: visible;
+    }
+    .menu{
+        z-index: 4;
+        list-style: none;
+        display: flex;
+        position: relative;
+        top: -500px;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 70px;
+        align-items: center;
+        transition: .5s all ease;
+    &__item{
+        padding-left: 0px;
+        padding-top: 30px;
+        a{
+           font-size: 28px;
+        }      
+    }
+}
+    
+    .visible{
+        top: 0;
+        background-color: rgba(0,0,0,.7);
+        width: 2000px;
+    }
+    
+}
+
+@media(max-width:942px){
+    .burger{
+          margin-left: 70%;
+    }
+}
+
+@media (max-width:872px){
+    .burger{
+      margin-left: 50%;
+    }
+
+}
+
+@media (max-width: 871px){
+    .left{
+        width: 100%;
+        justify-content: center;
+        &__body{
+        margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    }
+    &__title{
+        font-size: 60px;
+        text-align: center;
+        margin-bottom: 100px;
+        display: block;
+        span{
+            text-align: center;
+            
+        }
+    }
+    &__btn{
+        margin-left: 0px;
+    }
+    }
+    .right{
+        visibility: hidden;
+        width: 0%;
+    }
+    .menu{
+         top: -550px;
+    &__item{
+        padding-left: 0px;
+        padding-top: 40px;
+        a{
+           font-size: 28px;
+            color: #FFCB57;
+            &:hover{
+                color: #fff;
+            }
+        }      
+    }
+}
+
+    .visible{
+        top: 0;
+        background-color: rgba(0,0,0,.9);
+
+    }
+}
+.icon-burger:before {
+  content: "\e900";
+}
+
+@media(max-width:716px){
+    .header__inner{
+        height: 10vh;
+    }
+    .content__inner{
+        height: 90vh;
+    }
+    .burger{
+        margin-left: 90%;
+    }
+    .logoBox{
+
+    .logo{
+    width: 70px;
+    height: 70px;
+}
+    a{
+  font-size: 30px;
+    }
+}
+}
+
+@media(max-width:588px){
+    .burger{
+        margin-left: 70%;
+    }
+}
+@media(max-width:524px){
+    .burger{
+        margin-left: 50%;
+    }
+}
+
+@media(max-width:488px){
+    .burger{
+        margin-left: 40%;
+    }
+    .left__title{
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width:438px){
+    .burger{
+        margin-left: 20%;
+    }
+}
+@media(max-width:378px){
+    .burger{
+        margin-left: 10%;
+    }
+}
+@media(max-width:346px){
+    .burger{
+        margin-left: 20%;
+    }
+    .logoBox{
+
+    .logo{
+    width: 50px;
+    height: 50px;
+}
+    a{
+  font-size: 25px;
+    }
+}
+     .menu{
+        flex-direction: column;
+        justify-content: center;
+         margin-left: 30px;
+        align-items: center;
+        transition: .5s all ease;
+    &__item{
+        padding-left: 0px;
+        padding-top: 30px;
+        a{
+           font-size: 20px;
+        }      
+    }
+}
+    
+}
+
