@@ -20,11 +20,13 @@ function parallax(event){
     });
     }
 }
-
+document.addEventListener("mousemove", parallax);
+                //***************БУРГЕР НА ПРИВЕТСТВЕННОЙ СТРАНИЦЕ
   document.querySelector(".burger").onclick = function(){
       document.querySelector(".menu").classList.toggle("visible");
       document.querySelector(".burger").classList.toggle("close");
   }
+  
   
   $(document).ready(function(){
       $(window).scroll(function(event){
@@ -74,9 +76,3 @@ function parallax(event){
 //        }
 //    });
 //}
-
-
-
-
-
-document.addEventListener("mousemove", parallax);

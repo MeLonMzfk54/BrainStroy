@@ -142,8 +142,149 @@ $sans: 'Open Sans', sans-serif;
             }
         }
     }
-    
-}
+    &__burger{
+        cursor: pointer;
+        transition: .4s all ease;
+        visibility: hidden;
+            span{
+                display: block;
+                position: relative;
+                width: 30px;
+                height: 2px;
+                background-color: white;
+                border-radius: 10px;
+                &:after,&:before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: 30px;
+                    height: 2px;
+                    background-color: white;
+                    border-radius: 10px;
+                     transition: .4s all ease;
+                }
+                &:after{
+                    top: 8px;
+                }
+                &:before{
+                    top: -8px;
+                }
+            }
+        }
+    @media (max-width:1110px){
+        &__menu{
+        display: flex;
+        &-item{
+            padding-left: 29px;
+            a{
+              font-size: 13px;
+            }
+            }
+        }
+        &__contacts{
+        display: flex;
+        align-items: center;
+        &_icon{
+           span{
+                color: #cfc8ba;
+               font-size: 33px;
+            } 
+        }
+        &_txt{
+            a{
+             font-size: 13px;
+            }
+        }
+    }
+        &__tel{
+        margin-left: 0px;
+        display: flex;
+        align-items: center;
+    }
+    }
+    @media(max-width:937px){
+        &__tel{
+            display: none;
+        }
+        
+        &__mail{
+            display: none;
+        }
+     
+        &__menu{
+            
+        }
+        &__contacts{
+            display: none;
+        }
+        &__inner_down{
+            justify-content: center;
+        }
+    }
+    @media(max-width:761px){
+        &__burger{
+            visibility: visible;
+        }
+        &__menu{
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: -500px;
+            transition: .5s all ease;
+            &-item{
+                padding: 0px 0px 10px 0px;
+                ul{
+                    display: none;
+                    li{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .visibleMain{
+            top: 140px;
+            background-color: #000;
+            width: 100%;
+            justify-content: center;
+        }
+    }
+    @media(max-width:565px){
+        &{
+            background-color: #9A9A9A;
+            hr{
+                display: none;
+            }
+        }
+        &__logoBox{
+            align-items: center;
+        }
+        &__icon{
+            img{
+               width: 40px;
+            height: 40px;   
+            }
+        }
+        &__text{
+            font-size: 20px;
+        }
+        .visibleMain{
+            top: 120px;
+            background-color: transparent;
+        }
+        &__button{
+            a{
+                padding: 10px 5px;
+                font-size: 10px;
+            }
+        }
+    }
+    @media(max-width:425px){
+        &__button{
+            display: none;
+        }
+    }
+    }
+
 
 
 

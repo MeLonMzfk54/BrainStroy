@@ -266,14 +266,6 @@ $sans: 'Open Sans', sans-serif;
         }
     }
 }
-//.icon-burger{
-//    color: white;
-//    font-size: 50px;
-//    visibility: hidden;
-//}
-
-
-
 @media(max-width:1638px){
     .logoBox{
 
@@ -566,7 +558,14 @@ $sans: 'Open Sans', sans-serif;
            font-size: 20px;
         }      
     }
+}  
 }
-    
+
+//*******************************MAIN********************************
+
+.preview{
+    width: 100wh;
+    height: 61.5vh;
+    background-color: #9a9a9a;
 }
 

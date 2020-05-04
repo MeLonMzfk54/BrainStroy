@@ -189,6 +189,134 @@ img {
 .headerMain__contacts_txt a:hover {
   color: #ffcb57;
 }
+.headerMain__burger {
+  cursor: pointer;
+  transition: 0.4s all ease;
+  visibility: hidden;
+}
+.headerMain__burger span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  border-radius: 10px;
+}
+.headerMain__burger span:after, .headerMain__burger span:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.4s all ease;
+}
+.headerMain__burger span:after {
+  top: 8px;
+}
+.headerMain__burger span:before {
+  top: -8px;
+}
+@media (max-width: 1110px) {
+  .headerMain__menu {
+    display: flex;
+  }
+  .headerMain__menu-item {
+    padding-left: 29px;
+  }
+  .headerMain__menu-item a {
+    font-size: 13px;
+  }
+  .headerMain__contacts {
+    display: flex;
+    align-items: center;
+  }
+  .headerMain__contacts_icon span {
+    color: #cfc8ba;
+    font-size: 33px;
+  }
+  .headerMain__contacts_txt a {
+    font-size: 13px;
+  }
+  .headerMain__tel {
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 937px) {
+  .headerMain__tel {
+    display: none;
+  }
+  .headerMain__mail {
+    display: none;
+  }
+  .headerMain__contacts {
+    display: none;
+  }
+  .headerMain__inner_down {
+    justify-content: center;
+  }
+}
+@media (max-width: 761px) {
+  .headerMain__burger {
+    visibility: visible;
+  }
+  .headerMain__menu {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: -500px;
+    transition: 0.5s all ease;
+  }
+  .headerMain__menu-item {
+    padding: 0px 0px 10px 0px;
+  }
+  .headerMain__menu-item ul {
+    display: none;
+  }
+  .headerMain__menu-item ul li {
+    display: none;
+  }
+  .headerMain .visibleMain {
+    top: 140px;
+    background-color: #000;
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 565px) {
+  .headerMain {
+    background-color: #9A9A9A;
+  }
+  .headerMain hr {
+    display: none;
+  }
+  .headerMain__logoBox {
+    align-items: center;
+  }
+  .headerMain__icon img {
+    width: 40px;
+    height: 40px;
+  }
+  .headerMain__text {
+    font-size: 20px;
+  }
+  .headerMain .visibleMain {
+    top: 120px;
+    background-color: transparent;
+  }
+  .headerMain__button a {
+    padding: 10px 5px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 425px) {
+  .headerMain__button {
+    display: none;
+  }
+}
 
 .wrapper {
   min-height: 100%;
@@ -710,4 +838,9 @@ img {
   .menu__item a {
     font-size: 20px;
   }
+}
+.preview {
+  width: 100wh;
+  height: 61.5vh;
+  background-color: #9a9a9a;
 }
