@@ -6,6 +6,8 @@ $monts: 'Montserrat Alternates', sans-serif;
 
 $sans: 'Open Sans', sans-serif;
 
+$russo: 'Russo One', sans-serif;
+
 // Для приветственной страницы
 
 .wrapper{
@@ -16,7 +18,6 @@ $sans: 'Open Sans', sans-serif;
     max-width: 1170px;
     padding: 0px 15px;
     margin: 0 auto;
-    position: relative;
 }
 .container__hello{
     max-width: 1805px;
@@ -561,11 +562,191 @@ $sans: 'Open Sans', sans-serif;
 }  
 }
 
-//*******************************MAIN********************************
-
+/*******************************MAIN********************************/
+/* PREVIW BLOCK*/
 .preview{
     width: 100wh;
     height: 61.5vh;
     background-color: #9a9a9a;
+    &__inner{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left{
+        background: url("../img/preview/cottageLeft.png");
+        width: 860px;
+        height: 448px;
+        font-family: $russo;
+        display: flex;
+        justify-content: space-between;
+        &_l{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__right{
+        background: url("../img/preview/cottageRight.png");
+        width: 267px;
+        height: 441px;
+        margin-left: 880px;
+        font-family: $sans;
+    }
+    &__left,&__right{
+        position: absolute;
+        top:-100px;
+        padding-top: 93px;
+    }
+    &__title{
+        width: 481px;
+  font-size: 48.5px;
+  line-height: 0.86;
+  letter-spacing: 1.46px;
+  text-transform: uppercase;
+  color: #ffffff;
+        text-align: center;
+    }
+    &__button{
+        padding-top: 46px;
+        transition: .5s all ease;
+        &:hover{
+                transform: rotate(10deg);
+            }
+        a{
+          background-color: #ffe7a1;
+          font-size: 30px;
+          text-transform: uppercase;
+          line-height: 0.87;
+          letter-spacing: 0.75px;
+          color: #333333;
+           padding: 17px 35px; 
+        }
+    }
+    &__pluses{
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        &_item{
+            display: flex;
+            align-items: center;
+            padding-top: 50px;
+            &:first-child{
+                padding-top: 0px;
+            }
+            span{
+                font-size: 50px;
+            }
+        }
+    }
+    &__text{
+          width: 233px;
+          font-size: 15px;
+          line-height: 1.74;
+          letter-spacing: 0.48px;
+          color: #ffcb57;
+        text-transform: uppercase;
+        padding-left: 15px;
+        text-align: center;
+    }
+    &__discount{
+        position: relative;
+        top: -19%;
+        width: 144px;
+  font-size: 35px;
+  line-height: 1.73;
+  letter-spacing: 0.88px;
+   background-color: #ffe7a1;
+  color: #000000;
+        text-align: center;
+    }
+    &__banner{
+        position: relative;
+        top: -10%;
+        width: 244px;
+        text-align: center;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: 1.16px;
+  color: #ffffff;
+        span{
+            font-size: 40px;
+            padding-left: 5px;
+            text-transform: uppercase;
+        }
+    }
+    &__desc{
+  font-size: 18px;
+  line-height: 1.08;
+  letter-spacing: 0.45px;
+  color: #ffffff;
+  text-align: center;
+    }
+    .btn__discount{
+        padding-left: 15px;
+        &:hover{
+            transform: rotate(-10deg);
+        }
+        a{
+          font-size: 18.5px;
+          line-height: 1.08;
+          letter-spacing: 0.46px;
+          color: #000000;
+          padding: 15px 40px;
+        }
+    }
+    @media(max-width:1161px){
+        &__left,&__right{
+            top:0px;
+            position: relative;
+        }
+        &__right{
+            display: none;
+        }
+        &__inner{
+            justify-content: center;
+        }
+    }
+    @media(max-width:836px){
+        &__left{
+            width: 600px;
+            &_l{
+                padding-top: 30px;    
+            }
+        }
+        &__title{
+            width:auto;
+            font-size: 30px;
+            text-align:center;
+        }
+    }
+    @media(max-width:614px){
+        &__text{
+            font-size: 12px;
+        }
+        &__pluses_item{
+            span{
+                font-size: 30px;
+            }
+        }
+    }
+    @media(max-width:580px){
+        &__pluses{
+            display: none;
+        }
+    }
+    @media(max-width:565px){
+        &__left{
+            top:-150px;
+        }
+        &__title{
+            line-height: 1.5;
+        }
+    }
+    @media(max-width:531px){
+        &__left{
+            background: none;
+        }
+    }
 }
 
