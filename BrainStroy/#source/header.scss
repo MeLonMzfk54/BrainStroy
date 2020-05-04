@@ -1,0 +1,149 @@
+$monts: 'Montserrat Alternates', sans-serif;
+
+$sans: 'Open Sans', sans-serif;
+
+.headerMain{
+          color: white;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+    &__inner{
+        padding-top: 17px;
+        &_up{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &_down{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    font-family: $monts;
+    background-color: #000;
+    width: 100%;
+    height: 38.5vh;
+    &__logoBox{
+        display: flex;
+        align-items: center;
+    }
+    &__icon{
+        img{
+            width: 76px;
+            height: 76px;
+        }
+    }
+    &__text{
+
+  font-size: 37px;
+  line-height: 0.59;
+  letter-spacing: 0.93px;
+    }
+    &__tel{
+        margin-left: 130px;
+        display: flex;
+        align-items: center;
+    }
+    &__telIcon{
+        .icon-telephone-icon{
+            font-size: 35px;
+            padding-right: 11px;
+        }
+    }
+    &__numbers{
+          font-size: 15.9px;
+          line-height: 1.63;
+          letter-spacing: 0.4px;
+        &-item{
+            padding-bottom: 10px;
+        }
+    }
+    &__mail{
+          font-size: 15.9px;
+          line-height: 1.63;
+          letter-spacing: 0.4px;
+    }
+    &__button{
+
+        a{
+          font-size: 15.9px;
+          line-height: 1.63;
+          letter-spacing: 0.4px;
+            background-color: #ffe7a1;
+             color: #000000;
+             border-radius: 15px;
+            padding: 15px 7px;
+        }
+    }
+    hr{
+        width: 100%;
+        height: 1px;
+        background-color: #cfc8ba;
+        margin: 50px 0px;
+    }
+    &__menu{
+        display: flex;
+        &-item{
+            padding-left: 29px;
+            &:first-child{
+                padding-left: 0px;
+            }
+            a{
+              font-size: 17px;
+              line-height: 1.63;
+              letter-spacing: 0.48px;
+              color: #ffffff;
+                text-transform: uppercase;
+                transition: .3s all ease;
+                &:hover{
+                     color: #ffcb57;
+                }
+            }
+            
+            &:hover{
+                ul{
+                    display: block;
+                }
+            }
+            ul{
+                display: none;
+                position: absolute;
+                li{
+                    a{
+                        padding: 10px 10px 10px 0px;
+                        text-transform: none;
+                    }
+                }
+            }
+        }
+    }
+    &__contacts{
+        display: flex;
+        align-items: center;
+        &_icon{
+           span{
+                color: #cfc8ba;
+               font-size: 33px;
+            } 
+        }
+        &_txt{
+            a{
+             font-size: 20px;
+          line-height: 1.63;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+            padding-left: 10px;
+                color: #fff;
+                transition: .3s all ease;
+                &:hover{
+                    color: #ffcb57;
+                }
+            }
+        }
+    }
+    
+}
+
+
+

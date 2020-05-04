@@ -1,5 +1,7 @@
 @import "null.scss";
 
+@import "header.scss";
+
 $monts: 'Montserrat Alternates', sans-serif;
 
 $sans: 'Open Sans', sans-serif;
@@ -10,7 +12,12 @@ $sans: 'Open Sans', sans-serif;
     min-height: 100%;
     overflow: hidden;
 }
-
+.container{
+    max-width: 1170px;
+    padding: 0px 15px;
+    margin: 0 auto;
+    position: relative;
+}
 .container__hello{
     max-width: 1805px;
     margin: 0 auto;
@@ -25,12 +32,6 @@ $sans: 'Open Sans', sans-serif;
     display: -ms-flex;
 }
 
-//body{
-//    background: url("../img/parallax-1/bgParallax1.jpg");
-//    background-repeat: no-repeat;
-//    background-size: cover;
-//    width: 100%;
-//}
 .logoBox{
     display: flex;
     align-items: center;

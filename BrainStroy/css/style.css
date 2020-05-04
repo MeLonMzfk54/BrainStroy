@@ -65,9 +65,141 @@ img {
   vertical-align: top;
 }
 
+.headerMain {
+  color: white;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-family: "Montserrat Alternates", sans-serif;
+  background-color: #000;
+  width: 100%;
+  height: 38.5vh;
+}
+.headerMain__inner {
+  padding-top: 17px;
+}
+.headerMain__inner_up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerMain__inner_down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerMain__logoBox {
+  display: flex;
+  align-items: center;
+}
+.headerMain__icon img {
+  width: 76px;
+  height: 76px;
+}
+.headerMain__text {
+  font-size: 37px;
+  line-height: 0.59;
+  letter-spacing: 0.93px;
+}
+.headerMain__tel {
+  margin-left: 130px;
+  display: flex;
+  align-items: center;
+}
+.headerMain__telIcon .icon-telephone-icon {
+  font-size: 35px;
+  padding-right: 11px;
+}
+.headerMain__numbers {
+  font-size: 15.9px;
+  line-height: 1.63;
+  letter-spacing: 0.4px;
+}
+.headerMain__numbers-item {
+  padding-bottom: 10px;
+}
+.headerMain__mail {
+  font-size: 15.9px;
+  line-height: 1.63;
+  letter-spacing: 0.4px;
+}
+.headerMain__button a {
+  font-size: 15.9px;
+  line-height: 1.63;
+  letter-spacing: 0.4px;
+  background-color: #ffe7a1;
+  color: #000000;
+  border-radius: 15px;
+  padding: 15px 7px;
+}
+.headerMain hr {
+  width: 100%;
+  height: 1px;
+  background-color: #cfc8ba;
+  margin: 50px 0px;
+}
+.headerMain__menu {
+  display: flex;
+}
+.headerMain__menu-item {
+  padding-left: 29px;
+}
+.headerMain__menu-item:first-child {
+  padding-left: 0px;
+}
+.headerMain__menu-item a {
+  font-size: 17px;
+  line-height: 1.63;
+  letter-spacing: 0.48px;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: 0.3s all ease;
+}
+.headerMain__menu-item a:hover {
+  color: #ffcb57;
+}
+.headerMain__menu-item:hover ul {
+  display: block;
+}
+.headerMain__menu-item ul {
+  display: none;
+  position: absolute;
+}
+.headerMain__menu-item ul li a {
+  padding: 10px 10px 10px 0px;
+  text-transform: none;
+}
+.headerMain__contacts {
+  display: flex;
+  align-items: center;
+}
+.headerMain__contacts_icon span {
+  color: #cfc8ba;
+  font-size: 33px;
+}
+.headerMain__contacts_txt a {
+  font-size: 20px;
+  line-height: 1.63;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding-left: 10px;
+  color: #fff;
+  transition: 0.3s all ease;
+}
+.headerMain__contacts_txt a:hover {
+  color: #ffcb57;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0px 15px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .container__hello {
