@@ -83,6 +83,7 @@ $sans: 'Open Sans', sans-serif;
         margin: 50px 0px;
     }
     &__menu{
+        z-index: 2;
         display: flex;
         &-item{
             padding-left: 29px;
@@ -212,7 +213,6 @@ $sans: 'Open Sans', sans-serif;
         }
      
         &__menu{
-            
         }
         &__contacts{
             display: none;
@@ -255,6 +255,14 @@ $sans: 'Open Sans', sans-serif;
                 display: none;
             }
         }
+        &__menu{
+            li{
+                a{
+                    color: black;
+                    font-weight: 900;
+                }
+            }
+        }
         &__logoBox{
             align-items: center;
         }
@@ -268,7 +276,7 @@ $sans: 'Open Sans', sans-serif;
             font-size: 20px;
         }
         .visibleMain{
-            top: 120px;
+            top: 80px;
             background-color: transparent;
         }
         &__button{
