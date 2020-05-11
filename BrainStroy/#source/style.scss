@@ -11,7 +11,7 @@ $russo: 'Russo One', sans-serif;
 // Для приветственной страницы
 
 .wrapper{
-    min-height: 100%;
+    min-height: 100vh;
     overflow: hidden;
 }
 .container{
@@ -19,6 +19,76 @@ $russo: 'Russo One', sans-serif;
     padding: 0px 15px;
     margin: 0 auto;
 }
+
+#toTop {
+width:100px;
+border-radius: 50px;
+color: white;
+text-align:center;
+position:fixed;
+bottom:10px; 
+right:10px;
+cursor:pointer;
+display:none;
+font-family: 'Century Gothic Regular'; 
+font-size:11px;
+     z-index: 4; 
+}
+
+.arrow {
+    position: relative;
+    cursor: pointer;
+    margin:20px;
+    width: 66px;
+    height: 30px;
+    &__left{
+        position: absolute;
+        background-color: transparent;
+        top: 10px;
+        left: 0;
+        width: 40px;
+        height: 10px;
+        display: block;
+        transform: rotate(-35deg);
+        float: right;
+        border-radius: 2px;
+        &:after{
+            content: "";
+            background-color: #337AB7;
+            width: 40px;
+            height: 10px;
+            display: block;
+            float: right;
+            border-radius: 6px 10px 10px 6px;
+            transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+             z-index: 1; 
+        }
+    }
+    &__right{
+        position: absolute;
+        background-color: transparent;
+        top: 10px;
+        left: 26px;
+        width: 40px;
+        height: 10px;
+        display: block;
+        transform: rotate(35deg);
+        float: right;
+        border-radius: 2px;
+        &:after{
+            content: "";
+            background-color: #337AB7;
+            width: 40px;
+            height: 10px;
+            display: block;
+            float: right;
+            border-radius: 10px 6px 6px 10px;
+            transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+            z-index: 1; 
+        }
+    }
+}
+
 .container__hello{
     max-width: 1805px;
     margin: 0 auto;
@@ -566,7 +636,7 @@ $russo: 'Russo One', sans-serif;
 /* PREVIW BLOCK*/
 .preview{
     width: 100wh;
-    height: 61.5vh;
+    min-height: 61.5vh;
     background-color: #9a9a9a;
     &__inner{
         position: relative;
@@ -747,6 +817,134 @@ $russo: 'Russo One', sans-serif;
         &__left{
             background: none;
         }
+        
     }
 }
+/* TECHNOLOGY BLOCK*/
+@font-face {
+font-family: 'Century Gothic Regular';
+src: url('../fonts/CenturyGothic/CenturyGothic.eot');
+src: url('../fonts/CenturyGothic/CenturyGothic.eot?#iefix') format('embedded-opentype'), url("../fonts/CenturyGothic/CenturyGothic.woff") format ("woff"),
+url("../fonts/CenturyGothic/CenturyGothic.ttf") format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+.technology{
+    background: #eef4fa;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: 'Century Gothic Regular'; 
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    &__inner{
+        padding-top: 70px;
+    }
+    &__title{
+          color: #393648;
+          font-size: 47.5px;
+          line-height: 1.26;
+          letter-spacing: 1.19px;
+        text-align: center;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 137px;
+    }
+    &__card{
+        width: 555px;
+        height: 400px;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    &__brick{
+        background: url(../img/technology/house.png);
+    }
+    &__wood{
+        background: url(../img/technology/woodHouse.png);
+    }
+    &__item{
+        
+    }
+    &__label{
+        position: absolute;
+        width: 390px;
+        height: 67px;
+        background-color: #393648;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+          font-size: 38.5px;
+          line-height: 1.26;
+          color: #ffe7a1;
+          text-transform: uppercase;
+        }
+    }
+    &__description{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 165px;
+        height: 67px;
+        background-color: #ffe7a1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        span{
+          font-size: 21.5px;
+          line-height: 1.26;
+          letter-spacing: 0.54px;
+          color: #393648;
+        }
+    }
+    @media(max-width:1149px){
+        height: 100%;
+        &__content{
+        flex-direction: column;
+            align-items: center;
+    }
+        &__item{
+            padding-bottom: 50px;
+        }
+    }
+    @media(max-width:583px){
+        &__card{
+        width: 450px;
+    }
+    }
+    @media(max-width:463px){
+         &__card{
+        width: 250px;
+    }
+        &__label{
+        width: 250px;
+        span{
+          font-size: 25px;
+          line-height: 1.26;
+          color: #ffe7a1;
+          text-transform: uppercase;
+        }
+    }
+        &__title{
+          color: #393648;
+          font-size: 35px;
+          line-height: 1.26;
+          letter-spacing: 1.19px;
+        text-align: center;
+    }
+        &__content{
+        padding-top: 70px;
+    }
+    }
+}
+
+
+
 
