@@ -23,7 +23,7 @@ $sans: 'Open Sans', sans-serif;
     font-family: $monts;
     background-color: #000;
     width: 100%;
-    height: 38.5vh;
+    min-height: 38.5vh;
     &__logoBox{
         display: flex;
         align-items: center;
@@ -105,6 +105,11 @@ $sans: 'Open Sans', sans-serif;
             &:hover{
                 ul{
                     display: block;
+                    li{
+                        a{
+                            font-weight: bold;
+                        }
+                    }
                 }
             }
             ul{
@@ -276,7 +281,7 @@ $sans: 'Open Sans', sans-serif;
             font-size: 20px;
         }
         .visibleMain{
-            top: 80px;
+            top: 70px;
             background-color: transparent;
         }
         &__button{
