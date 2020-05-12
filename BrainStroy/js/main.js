@@ -15,8 +15,7 @@ for(let i = 0;i<card.length;i++){
 function rotate(event){
     let cardItem = this.querySelector(".technology__card");
     let halfHeight = cardItem.offsetHeight / 2;
-    cardItem.style.transform = "rotateX("+ -(event.offsetY - halfHeight) / 20+"deg) rotateY("+(event.offsetX - halfHeight) / 20+"deg)"
-    console.log(event.offsetY);
+    cardItem.style.transform = "rotateX("+ -(event.offsetY - halfHeight) / 15+"deg) rotateY("+(event.offsetX - halfHeight) / 15+"deg)";
 }
 function rotateStop(event){
     let cardItem = this.querySelector(".technology__card");
