@@ -228,13 +228,13 @@ $sans: 'Open Sans', sans-serif;
     }
     @media(max-width:761px){
         &__burger{
-            visibility: visible;
+            visibility: hidden;
         }
         &__menu{
             flex-direction: column;
             align-items: center;
             position: absolute;
-            top: -500px;
+            top: 150px;
             transition: .5s all ease;
             &-item{
                 padding: 0px 0px 10px 0px;
@@ -248,7 +248,7 @@ $sans: 'Open Sans', sans-serif;
         }
         .visibleMain{
             top: 140px;
-            background-color: #000;
+            background-color: #333;
             width: 100%;
             justify-content: center;
         }
@@ -260,9 +260,14 @@ $sans: 'Open Sans', sans-serif;
                 display: none;
             }
         }
+        &__burger{
+            visibility: visible;
+        }
         &__menu{
+            top: -500px;
             li{
                 a{
+                    font-size: 17px;
                     color: black;
                     font-weight: 900;
                 }
