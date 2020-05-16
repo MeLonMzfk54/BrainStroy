@@ -1104,6 +1104,7 @@ img {
 /*******************************MAIN********************************/
 /* PREVIW BLOCK*/
 .preview {
+  padding-top: 70px;
   width: 100wh;
   min-height: 61.5vh;
   background-color: #9a9a9a;
@@ -1279,6 +1280,9 @@ img {
   }
   .preview__title {
     line-height: 1.5;
+  }
+  .preview {
+    padding-top: 0px;
   }
 }
 @media (max-width: 531px) {
