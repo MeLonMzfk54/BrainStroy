@@ -17,6 +17,9 @@
             <!--   Иконки   -->
 <link rel="stylesheet" href="icomoon-v1.0/font.css">
 <link rel="stylesheet" href="icomoon-v1.0/ie7/ie7.css">
+
+            <!--Magnific-Popup-->
+<link rel="stylesheet" href="libs/Magnific-Popup-master/Magnific-Popup-master/dist/magnific-popup.css">
 </head>
 <body>
 <!-- СТРЕЛКА ПРОКРУТКИ СТРАНИЦЫ ВВЕРХ-->
@@ -49,7 +52,7 @@
                             </div>
                             <div class="headerMain__mail">brainstroy@mail.ru</div>
                             <div class="headerMain__button">
-                                <a href="#">заказать звонок</a>
+                                <a class="headerMain__popup" href="#hiddenFormId">заказать звонок</a>
                             </div>
                         </div>
                         <hr>
@@ -114,7 +117,7 @@
                         <div class="preview__discount">Акция!</div>
                         <div class="preview__banner">Проект дома <span>бесплатно</span></div>
                         <div class="preview__desc">при заказе строительства дома сделаем проект дома бесплатно!</div>
-                        <div class="preview__button btn__discount"><a href="#">Подать заявку</a></div>
+                        <div class="preview__button btn__discount"><a class="preview__btn" href="#popupId">Подать заявку</a></div>
                     </div>
                 </div>
             </div>
@@ -161,7 +164,7 @@
                                 <div class="popular__cost">от 4 165 400 руб.</div>
                                 <hr>
                                 <div class="popular__square">Площадь 118 <span>м²</span></div>
-                               <a href="#" class="popular__view">Посмотреть все</a>
+                               <a href="#" class="popular__view">Посмотреть проект</a>
                             </div>
                         </div>
                         
@@ -173,7 +176,7 @@
                                 <div class="popular__cost">от 2 605 900 руб.</div>
                                 <hr>
                                 <div class="popular__square">Площадь 103 <span>м²</span></div>
-                                <a href="#" class="popular__view">Посмотреть все</a>
+                                <a href="#" class="popular__view">Посмотреть проект</a>
                             </div>
                         </div>
                         
@@ -185,7 +188,7 @@
                                 <div class="popular__cost">от 3 530 000 руб.</div>
                                 <hr>
                                 <div class="popular__square">Площадь 100 <span>м²</span></div>
-                                <a href="#" class="popular__view">Посмотреть все</a>
+                                <a href="#" class="popular__view">Посмотреть проект</a>
                             </div>
                         </div>
                         </div>
@@ -198,7 +201,7 @@
                                 <div class="popular__cost">от 2 352 900 руб.</div>
                                 <hr>
                                 <div class="popular__square">Площадь 93 <span>м²</span></div>
-                                <a href="#" class="popular__view">Посмотреть все</a>
+                                <a href="#" class="popular__view">Посмотреть проект</a>
                             </div>
                         </div>
                         
@@ -210,7 +213,7 @@
                                 <div class="popular__cost">от 2 612 139 руб.</div>
                                 <hr>
                                 <div class="popular__square">Площадь 74 <span>м²</span></div>
-                               <a href="#" class="popular__view">Посмотреть все</a>
+                               <a href="#" class="popular__view">Посмотреть проект</a>
                             </div>
                         </div>
                         
@@ -222,7 +225,7 @@
                                 <div class="popular__cost">от 1 228 337 руб.</div>
                                 <hr>
                                 <div class="popular__square">Площадь 49 <span>м²</span></div>
-                               <a href="#" class="popular__view">Посмотреть все</a>
+                               <a href="#" class="popular__view">Посмотреть проект</a>
                             </div>
                         </div>
                         </div>
@@ -316,9 +319,20 @@
         </footer>
         
         
-
+    <div class="popup">
+           <h3 class="popup__title">Заказать звонок</h3>
+            <form action="" id = "popupId" class="popup__form">
+                <input type="text" class="popup__name" name="pName" placeholder="Ваше имя">
+                <input type="text" class="popup__tel" placeholder="Ваш номер телефона" name="pTel">
+                <input type="submit" class="popup__submit" name="pSubmit" value = "Отправить">
+            </form>
+        </div>
+        <div class="popup__bg"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="libs/Magnific-Popup-master/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/buttons.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>
