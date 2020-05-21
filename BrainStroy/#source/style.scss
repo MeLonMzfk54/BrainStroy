@@ -1004,7 +1004,7 @@ font-style: normal;
         padding-bottom: 40px;
     }
     &__item{
-        border: 2px solid #ffe7a1;
+        border: 2px solid #ffe7a1;    
     }
     &__image{
         background-repeat: no-repeat;
@@ -1458,6 +1458,43 @@ font-style: normal;
         background-color: #FFE7A1;
         padding: 10px;
     }
+}
+
+/*Стили для экрана, который появляется при загрузке страницы*/
+.preloader{
+font-family: $monts;
+position: fixed;
+left: 0;
+top: 0;
+right:0;
+bottom:0;
+background: #333;
+z-index: 101;
+ &__text{    
+width: 250px;
+height: 100px;
+position: absolute;
+left: 50%;
+top: 48%;
+margin-left:-125px;
+margin-top:-75px;
+color:#FFDE6A;
+font-size:40px;
+letter-spacing:-2px;
+text-align:center;
+line-height:35px;
+  small{
+      font-size:25px;
+    }  
+}
+&__animation {
+position: absolute;
+width: 41px;
+height: 41px;
+//background: url("../img/gif/lo") center center no-repeat;
+background-size:41px;    
+margin: -16px 0 0 -16px;
+    }    
 }
 
 
