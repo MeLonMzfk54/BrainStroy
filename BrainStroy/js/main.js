@@ -16,15 +16,3 @@ function rotateStop(event){
     let cardItem = this.querySelector(".technology__card");
     cardItem.style.transform = "rotate(0)";
 }
-$(function() {
-    //Функция для стрелочки, которая поднимает страницу вверх
-$(window).scroll(function() {
-    ($(this).scrollTop() != 0) ? $('#toTop').fadeIn() :      $('#toTop').fadeOut(); 
-});
-
-$('#toTop').click(function() {
-    $('*').animate({scrollTop:0},500);
-});
-
-
-});
