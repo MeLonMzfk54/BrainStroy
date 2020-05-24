@@ -16,15 +16,6 @@ function rotateStop(event){
     let cardItem = this.querySelector(".technology__card");
     cardItem.style.transform = "rotate(0)";
 }
-//Функция для загрузочного экрана
-$(window).on('load', function () {
-    let preloader = $('.preloader');
-      let  animationSvg = preloader.find('.preloader__animation');
-    animationSvg.fadeOut();
-    $('*').animate({scrollTop:0},500);
-    preloader.delay(100).fadeOut("slow");
-        });
-
 $(function() {
     //Функция для стрелочки, которая поднимает страницу вверх
 $(window).scroll(function() {
