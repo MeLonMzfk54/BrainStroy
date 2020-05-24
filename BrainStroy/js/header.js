@@ -14,6 +14,16 @@ $(".headerMain__popup").click(function(){
     });
 });
 
+$(".preview__call").click(function(){
+    $(".popup").css({'top':$(window).scrollTop()+200}).addClass("active__popup");
+    $(".popup__bg").fadeIn();
+    $(".popup__title").html("Заказать звонок");
+    $(".popup__bg").click(function(){
+        $(".popup").removeClass("active__popup");
+        $(".popup__bg").fadeOut();
+    });
+});
+
 //Функция для загрузочного экрана
 $(window).on('load', function () {
     let preloader = $('.preloader');
@@ -30,3 +40,16 @@ $(window).on('load', function () {
         let top = $(id).offset().top;
         $("*").animate({scrollTop:top},1000);
     });
+
+$(function() {    
+    //Функция для стрелочки, которая поднимает страницу вверх
+$(window).scroll(function() {
+    ($(this).scrollTop() != 0) ? $('#toTop').fadeIn() :      $('#toTop').fadeOut(); 
+});
+
+$('#toTop').click(function() {
+    $('*').animate({scrollTop:0},500);
+});
+
+
+});
