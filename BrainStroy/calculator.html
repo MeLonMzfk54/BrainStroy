@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Выбор проекта</title>
+    <title>Индивидуальный проект</title>
                     <!--   ИКОНКА НА ВКЛАДКЕ     -->
 <link rel="shortcut icon" href="img/header/brain-icon.png" type="image/png">              
                 <!--   Стили     -->
-<link rel="stylesheet" href="css/style.css">               
+<link rel="stylesheet" href="css/style.css">              
                 <!--   Шрифт montserrat   -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@0;1&display=swap" rel="stylesheet">          
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@0;1&display=swap" rel="stylesheet">           
             <!--   Шрифт OpenSans   -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">         
            <!--   Шрифт Russo   -->
-<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">           
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">         
             <!--   Иконки   -->
 <link rel="stylesheet" href="icomoon-v1.0/font.css">
 <link rel="stylesheet" href="icomoon-v1.0/ie7/ie7.css">
-
             <!--Magnific-Popup-->
 <!--<link rel="stylesheet" href="libs/Magnific-Popup-master/Magnific-Popup-master/dist/magnific-popup.css">-->
 </head>
 <body>
 <!--  Wrapper  -->
      <div class="wrapper">
-<!--  Стрелочка, которая поднимает страницу вверх   -->
+<!--   Стрелочка, которая поднимает страницу вверх  -->
      <div id="toTop">
       <div class="arrow">
         <span class="arrow__left"></span>
@@ -32,7 +31,7 @@
      </div>
   </div>
 <!--  Шапка сайта  -->
-      <header class="headerMain headerPr">
+      <header class="headerMain headerCalc">
                 <div class="container">
                     <div class="headerMain__inner">
                        <div class="headerMain__inner_up">
@@ -62,11 +61,10 @@
                                 <li class="headerMain__menu-item"><a href="main.html">Главная</a></li>
                                 <li class="headerMain__menu-item"><a href="#">Акции</a></li>
                                 <li class="headerMain__menu-item">
-                                <a href="#">Проекты домов</a>
+                                <a href="allProjects.html">Проекты домов</a>
                                 <ul>
                                         <li><a href="#">Дома из кирпича</a></li>
                                         <li><a href="#">Деревянные дома</a></li>
-                                        <li><a href="calculator.html">Индивидуальный проект</a></li>
                                     </ul>
                                 </li>
                                 <li class="headerMain__menu-item"><a href="#">Отзывы</a></li>
@@ -79,10 +77,9 @@
                         </div>
                     </div>
                 </div>
-        </header>
-        
+        </header>        
 <!--   Блок превью с временной акцией     -->
-        <section class="preview previewPr">
+        <section class="preview previewPr previewCalc">
             <div class="container">
                <div class="preview__inner">
                     <div class="preview__left">
@@ -119,43 +116,87 @@
                 </div>
             </div>
         </section>
-        
 <!--    Контентный блок страницы    -->
-        <section class="allProjects">
+        <section class="calculator">
             <div class="container">
-                <div class="allProjects__title">Дома из дерева</div>
-            </div>
-            <div class="container780">
-                <div class="allProjects__block">
-                    <div class="allProjects__item">
-                       <a href="calculator.html" class="allProjects__link"> <div class="allProjects__individual"><img src="img/housesForAllProjects/proekt.jpg" alt=""></div></a>
-                        <div class="allProjects__subtitle">Индивидуальный проект</div>
+                <div class="calculator__inner">
+                   <div class="calculator__header">
+                        <h1 class="calculator__title">Индивидуальный проект</h1>
+                        <div class="calculator__description">Вы можете сами посчитать примерную стоимость стро- <br>ительства вашего дома, воспользовавшись калькулятором <br>ниже, а также приложить проект вашего дома.</div>
                     </div>
-                    <div class="allProjects__item">
-                        <div class="allProjects__all"><a href="" class="allProjects__link"><img src="img/housesForAllProjects/derevo.png" alt="woodHouse"></a></div>
-                        <div class="allProjects__subtitle">Все проекты</div>
+                    <div class="calculator__content">
+                       <div class="calculator__left">
+                            <h2 class="calculator__name">
+                                Калькулятор стоимости <br>Нового дома
+                            </h2>
+                            <form action="#" class="calculator__form one">
+                               <div class="calculator__item">
+                                    <p class="calculator__text">Выберите материал дома</p>
+                                    <input type="radio" name = "material" value="wood" class = "calculator__radio" id = "calculator__wood">
+                                    <label for="calculator__wood"><span class="calculator__case">Брус</span></label>
+                                    <input type="radio" name = "material" value="brick" class = "calculator__radio" id = "calculator__brick">
+                                    <label for="calculator__brick"><span class="calculator__case">Кирпич</span></label>
+                                </div>
+                                <div class="calculator__item one">
+                                    <p class="calculator__text calculator__text_m">Выберите комплектацию дома</p>
+                                  
+                                        <input type="radio" name = "service" value="eco" class = "calculator__radio" id="calculator__eco">
+                                        <label for="calculator__eco"><span class="calculator__case calculator__case_m">Эконом</span></label>
+                                        <div class="calculator__subdesc">Строительство коробки: фундамент, стены внутренние и наружные, перекрытие, крыша</div>
+                                   
+                                   
+                                        <input type="radio" name = "service" value="standard" class = "calculator__radio" id="calculator__standard">
+                                        <label for="calculator__standard"><span class="calculator__case calculator__case_m">Стандарт</span></label>
+                                        <div class="calculator__subdesc">Вся комплектация эконом + окна, двери, фасад декоративная штукатурка</div>
+                                     
+                                     
+                                        <input type="radio" name = "service" value="premium" class = "calculator__radio" id="calculator__premium">
+                                        <label for="calculator__premium"><span class="calculator__case calculator__case_m">Премиум</span></label>
+                                        <div class="calculator__subdesc">Вся комплектация стандарт + электроразводка, водоснабжение, канализация, внутренняя чистовая штукатурка стен и шпаклёвка стен</div>
+                                   
+                                </div>
+                                <div class="calculator__item calculator__item_l">
+                                    <p class="calculator__text calculator__text_last">Выберите площадь дома</p>
+                                    <input type="text" value="0" class="calculator__input">
+                                </div>
+                                <div class="calculator__item">
+                                    <span class="calculator__button">Посчитать</span>
+                                </div>
+                            </form>
+                            <p class="calculator__result">Примерная стоимость дома = <span class="calculator__cost">0</span> руб.</p>
+                        </div>
+                        <div class="calculator__right">
+                            <div class="about__formBg">
+                                <div class="about__description">Если у вас есть эскиз вашего будущего дома, то присылайте его к нам на почту <span>brainstroy@mail.ru</span> или заполните форму справа,чтобы мы просмотрели и проконсультировали вас, а также могли связаться с вами в будущем!</div>
+                                <form class="about__form" action="#" method="post" enctype="multipart/form-data">
+                                    <input type="hidden" name="MAX_FILE_SIZE" value="300000">
+                                    <div class="about__input-wrapper">
+                                        <input type="text" class="about__name" placeholder="ваше имя" name="name">
+                                        <span class="icon-name-icon"></span>
+                                    </div>
+                                    <div class="about__input-wrapper">
+                                        <input type="tel" class="about__tel" placeholder="ваш номер телефона" name="telephone">
+                                        <span class="icon-phone-icon"></span>
+                                    </div>
+                                    <div class="about__buttons">
+                                        <div class="input__wrapper">
+                                            <input name="image" type="file" id="input__file" class="about__image">
+                                            <label for="input__file" class="about__btn about__btn-l">
+                                                <span class="input__file-button-text">выберите файл</span>
+                                            </label>
+                                        </div>
+                                        <input type="submit" name="upload" class="form__submit about__btn" value="отправить план">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <div class="allProjects__title allProjects__title-l">Дома из кирпича</div>
-            </div>
-            <div class="container780">
-                <div class="allProjects__block">
-                    <div class="allProjects__item">
-                        <a href="calculator.html" class="allProjects__link"> <div class="allProjects__individual"><img src="img/housesForAllProjects/proekt.jpg" alt=""></div></a>
-                        <div class="allProjects__subtitle">Индивидуальный проект</div>
-                    </div>
-                    <div class="allProjects__item">
-                        <div class="allProjects__all"><a class="allProjects__link" href=""><img src="img/housesForAllProjects/kirpich.png" alt="brickHouse"></a></div>
-                        <div class="allProjects__subtitle">Все проекты</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </section>    
         
 <!--   Подвал сайта     -->
-        <footer class="footer" id="Contacts">
+        <footer class="footer footerCalc" id="Contacts">
             <div class="container">
                 <div class="footer__inner">
                     <div class="footer__upper">
@@ -188,8 +229,7 @@
                     </div>
                 </div>
             </div>
-        </footer>  
-            
+        </footer>            
             <!--  Типа экран загрузки  -->
     <div class="preloader">
     <div class="preloader__text">
@@ -208,11 +248,13 @@
 <!--   Фон этого экрана     -->
         <div class="popup__bg"></div>
         </div>
-<!--    Jquery    -->
+<!--   Jquery     -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-<!--  Скрипты для кнопок  -->
+    <!--  Скрипты для кнопок  -->
     <script src="js/buttons.js"></script>
     <!--  Скрипт шапки, загрузочного экрана и некоторых кнопок  -->
     <script src="js/header.js"></script>
+    
+    <script src="js/calculator.js"></script>
 </body>
 </html>

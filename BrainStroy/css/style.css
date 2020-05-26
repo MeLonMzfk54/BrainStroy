@@ -1291,6 +1291,23 @@ img {
   }
 }
 
+.discount__btn {
+  padding-top: 46px;
+  transition: 0.5s all ease;
+}
+.discount__btn:hover {
+  transform: rotate(10deg);
+}
+.discount__btn a {
+  background-color: #ffe7a1;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: 0.87;
+  letter-spacing: 0.75px;
+  color: #333333;
+  padding: 17px 35px;
+}
+
 /* TECHNOLOGY BLOCK*/
 @font-face {
   font-family: "Century Gothic Regular";
@@ -2104,5 +2121,286 @@ img {
   .allProjects__individual img {
     width: 292px;
     height: 242px;
+  }
+}
+
+/*Страница с калькулятором (Индивидуальный проект)*/
+.headerCalc {
+  background: #CDD7CC;
+}
+.headerCalc .btn__discount {
+  visibility: visible;
+}
+.headerCalc hr {
+  background-color: black;
+}
+.headerCalc .icon-contacts-icon {
+  color: white;
+}
+@media (max-width: 530px) {
+  .headerCalc {
+    background: #97A49B;
+  }
+}
+
+.previewCalc {
+  background: #97A49B;
+}
+
+.footerCalc {
+  background: #CDD7CC;
+}
+
+.calculator {
+  padding-bottom: 70px;
+  font-family: "Montserrat Alternates", sans-serif;
+  background: #97A49B;
+}
+.calculator__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calculator__title {
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: 0.6px;
+  text-align: center;
+}
+.calculator__description {
+  font-size: 15.9px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #000000;
+}
+.calculator__content {
+  padding-top: 91px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calculator__name {
+  font-size: 23px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: 0.58px;
+  text-align: center;
+  color: #ffffff;
+  padding-bottom: 60px;
+}
+.calculator__form {
+  text-align: center;
+}
+.calculator__item {
+  margin-bottom: 52px;
+}
+.calculator__item:last-child {
+  padding-top: 30px;
+}
+.calculator__item_l {
+  margin-bottom: 10px;
+}
+.calculator__text {
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+  padding-bottom: 23px;
+}
+.calculator__text_m {
+  cursor: pointer;
+  position: relative;
+}
+.calculator__text_m:before {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 2px;
+  background-color: white;
+  right: 0px;
+  top: 10px;
+  transform: rotate(45deg);
+  transition: 0.4s all ease;
+}
+.calculator__text_m:after {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 2px;
+  background-color: white;
+  right: -5px;
+  top: 10px;
+  transform: rotate(-45deg);
+  transition: 0.4s all ease;
+}
+.calculator__text_m.active:after, .calculator__text_m.active:before {
+  background-color: #FFE7A1;
+}
+.calculator__text_m.active:before {
+  transform: rotate(-45deg);
+}
+.calculator__text_m.active:after {
+  transform: rotate(45deg);
+}
+.calculator__text_m.active input[type=radio] {
+  margin-bottom: 12px;
+}
+.calculator__text_last {
+  padding-bottom: 12px;
+}
+.calculator__radio {
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+.calculator__radio:before {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #97A49B;
+}
+.calculator__radio:after {
+  left: 1px;
+  top: 1px;
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.calculator__radio:checked:after {
+  background-color: #FFE7A1;
+}
+.calculator__radio:focus:after {
+  background-color: #FFE7A1;
+}
+.calculator input[type=radio] {
+  margin-left: 15px;
+}
+.calculator__input {
+  margin-left: 15px;
+  text-align: center;
+}
+.calculator__case {
+  cursor: pointer;
+  color: white;
+}
+.calculator__case_m {
+  margin-bottom: 10px;
+}
+.calculator__input {
+  background-color: transparent;
+  border-bottom: 2px solid white;
+}
+.calculator__result {
+  margin-top: 0px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+.calculator__button {
+  background-color: #FFE7A1;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+.calculator__subdesc {
+  display: none;
+  width: 350px;
+  margin-bottom: 20px;
+}
+.calculator .icon-phone-icon {
+  font-size: 18px;
+  color: #fff;
+}
+.calculator .icon-name-icon {
+  font-size: 19px;
+  color: #fff;
+}
+.calculator .about__btn {
+  background-color: #ffe7a1;
+  padding: 9.5px 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.calculator .about__btn-l {
+  padding: 9px 5px;
+}
+@media (max-width: 1129px) {
+  .calculator__content {
+    flex-direction: column;
+  }
+  .calculator__result {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 375) {
+  .calculator__title {
+    text-align: center;
+  }
+}
+@media (max-width: 368px) {
+  .calculator .about__btn {
+    background-color: #ffe7a1;
+    padding: 7px 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 10px;
+  }
+  .calculator .about__btn span {
+    font-size: 10px;
+  }
+}
+@media (max-width: 364px) {
+  .calculator__text_m.active:after, .calculator__text_m.active:before {
+    background-color: #FFE7A1;
+  }
+  .calculator__text_m.active:before {
+    right: 20px;
+    transform: rotate(-45deg);
+  }
+  .calculator__text_m.active:after {
+    right: 15px;
+    transform: rotate(45deg);
+  }
+}
+@media (max-width: 350px) {
+  .calculator input[type=radio] {
+    margin-left: 5px;
+  }
+}
+@media (max-width: 338px) {
+  .calculator__text_m:before {
+    right: -7px;
+  }
+  .calculator__text_m:after {
+    right: -12px;
+  }
+  .calculator__text_m.active:after, .calculator__text_m.active:before {
+    background-color: #FFE7A1;
+  }
+  .calculator__text_m.active:before {
+    right: 20px;
+    transform: rotate(-45deg);
+  }
+  .calculator__text_m.active:after {
+    right: 15px;
+    transform: rotate(45deg);
   }
 }
