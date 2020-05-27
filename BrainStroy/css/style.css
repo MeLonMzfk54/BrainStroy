@@ -2308,6 +2308,7 @@ img {
 .calculator__input {
   background-color: transparent;
   border-bottom: 2px solid white;
+  color: #FFE7A1;
 }
 .calculator__result {
   margin-top: 0px;
@@ -2319,6 +2320,9 @@ img {
   background-color: #FFE7A1;
   cursor: pointer;
   padding: 10px 15px;
+}
+.calculator__cost {
+  transition: 0.3s all ease;
 }
 .calculator__subdesc {
   display: none;
