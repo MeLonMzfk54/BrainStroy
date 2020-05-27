@@ -129,7 +129,7 @@
                             <h2 class="calculator__name">
                                 Калькулятор стоимости <br>Нового дома
                             </h2>
-                            <form action="#" class="calculator__form one">
+                            <form action="#" class="calculator__form">
                                <div class="calculator__item">
                                     <p class="calculator__text">Выберите материал дома</p>
                                     <input type="radio" name = "material" value="wood" class = "calculator__radio" id = "calculator__wood">
@@ -140,24 +140,24 @@
                                 <div class="calculator__item one">
                                     <p class="calculator__text calculator__text_m">Выберите комплектацию дома</p>
                                   
-                                        <input type="radio" name = "service" value="eco" class = "calculator__radio" id="calculator__eco">
+                                        <input type="radio" name = "service" value="eco" class = "calculator__radio calculator__radio_r" id="calculator__eco">
                                         <label for="calculator__eco"><span class="calculator__case calculator__case_m">Эконом</span></label>
                                         <div class="calculator__subdesc">Строительство коробки: фундамент, стены внутренние и наружные, перекрытие, крыша</div>
                                    
                                    
-                                        <input type="radio" name = "service" value="standard" class = "calculator__radio" id="calculator__standard">
+                                        <input type="radio" name = "service" value="standard" class = "calculator__radio calculator__radio_r" id="calculator__standard">
                                         <label for="calculator__standard"><span class="calculator__case calculator__case_m">Стандарт</span></label>
                                         <div class="calculator__subdesc">Вся комплектация эконом + окна, двери, фасад декоративная штукатурка</div>
                                      
                                      
-                                        <input type="radio" name = "service" value="premium" class = "calculator__radio" id="calculator__premium">
+                                        <input type="radio" name = "service" value="premium" class = "calculator__radio calculator__radio_r" id="calculator__premium">
                                         <label for="calculator__premium"><span class="calculator__case calculator__case_m">Премиум</span></label>
                                         <div class="calculator__subdesc">Вся комплектация стандарт + электроразводка, водоснабжение, канализация, внутренняя чистовая штукатурка стен и шпаклёвка стен</div>
                                    
                                 </div>
                                 <div class="calculator__item calculator__item_l">
                                     <p class="calculator__text calculator__text_last">Выберите площадь дома</p>
-                                    <input type="text" value="0" class="calculator__input">
+                                    <input type="text" value="0" class="calculator__input" onkeypress="numbersOnly()">
                                 </div>
                                 <div class="calculator__item">
                                     <span class="calculator__button">Посчитать</span>

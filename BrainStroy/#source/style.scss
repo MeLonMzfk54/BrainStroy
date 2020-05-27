@@ -1879,6 +1879,7 @@ margin: -16px 0 0 -16px;
     &__input{
         background-color: transparent;
         border-bottom: 2px solid white;
+        color: #FFE7A1;
     }
     &__result{
         margin-top: 0px;
@@ -1890,6 +1891,9 @@ margin: -16px 0 0 -16px;
         background-color: #FFE7A1;
         cursor: pointer;
         padding: 10px 15px;
+    }
+    &__cost{
+        transition: .3s all ease;
     }
 &__subdesc{
         display: none;
