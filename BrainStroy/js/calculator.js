@@ -13,29 +13,29 @@ $(document).ready(function(){
 //        alert(valueMat); alert(valueKomp);alert(valueSquare);
         if(valueMat == "wood"){
             if(valueKomp == "eco"){
-                let result = valueSquare * 16000;
+                let result = valueSquare * 19000;
                 $(".calculator__cost").html(result);
             }
             if(valueKomp == "standard"){
-                let result = valueSquare * 20000;
+                let result = valueSquare * 23000;
                 $(".calculator__cost").html(result);
             }
             if(valueKomp == "premium"){
-                let result = valueSquare * 25000;
+                let result = valueSquare * 29000;
                 $(".calculator__cost").html(result);
             }
         }
         if(valueMat == "brick"){
             if(valueKomp == "eco"){
-                let result = valueSquare * 20000;
+                let result = valueSquare * 23000;
                 $(".calculator__cost").html(result);
             }
             if(valueKomp == "standard"){
-                let result = valueSquare * 25000;
+                let result = valueSquare * 28000;
                 $(".calculator__cost").html(result);
             }
             if(valueKomp == "premium"){
-                let result = valueSquare * 31000;
+                let result = valueSquare * 34000;
                 $(".calculator__cost").html(result);
             }
         }
