@@ -2567,6 +2567,70 @@ img {
   margin-right: 15px;
   color: #FFE7A1;
 }
+.filter__wood {
+  padding-right: 30px;
+  padding-left: 15px;
+  position: relative;
+  cursor: pointer;
+}
+.filter__wood:before {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  left: -3px;
+  top: 4px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #f5f5f5;
+}
+.filter__wood:after {
+  transition: 0.4s all ease;
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  left: -3px;
+  top: 4px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #f5f5f5;
+}
+.filter__brick {
+  position: relative;
+  cursor: pointer;
+}
+.filter__brick:before {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  left: -17px;
+  top: 4px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #f5f5f5;
+}
+.filter__brick:after {
+  transition: 0.4s all ease;
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 13px;
+  left: -17px;
+  top: 4px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #f5f5f5;
+}
+.filter .checked:after {
+  background-color: #FFE7A1;
+}
+.filter__button {
+  padding-top: 9px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
 .filter__rooms {
   padding-top: 17px;
 }
@@ -2581,6 +2645,10 @@ img {
   line-height: 1.73;
   letter-spacing: 0.38px;
 }
+.filter__params {
+  display: none;
+}
+
 @media (max-width: 905px) {
   .builded__content {
     flex-direction: column;
@@ -2642,4 +2710,61 @@ img {
   .builded__img img {
     width: 300px;
   }
+}
+.active:before, .active:after {
+  transition: 0.4s all ease;
+}
+.active:before {
+  content: "";
+  width: 11px;
+  height: 1px;
+  position: absolute;
+  background-color: #f5f5f5;
+  right: 7.5px;
+  transform: rotate(45deg);
+  top: 20px;
+}
+.active:after {
+  content: "";
+  width: 11px;
+  height: 1px;
+  position: absolute;
+  background-color: #f5f5f5;
+  right: 0px;
+  transform: rotate(-45deg);
+  top: 20px;
+}
+
+.filter__title {
+  padding-right: 90px;
+}
+.filter__title:before, .filter__title:after {
+  transition: 0.4s all ease;
+}
+.filter__title:before {
+  content: "";
+  width: 11px;
+  height: 1px;
+  position: absolute;
+  background-color: #f5f5f5;
+  right: 50px;
+  transform: rotate(45deg);
+  top: 20px;
+}
+.filter__title:after {
+  content: "";
+  width: 11px;
+  height: 1px;
+  position: absolute;
+  background-color: #f5f5f5;
+  right: 43px;
+  transform: rotate(-45deg);
+  top: 20px;
+}
+
+.active:after {
+  transform: rotate(45deg);
+}
+.active:before {
+  transform: rotate(-45deg);
 }
