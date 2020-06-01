@@ -2393,6 +2393,58 @@ margin: -16px 0 0 -16px;
         }
     }
 
+.previewStocks{
+    background: #3E4245;
+    .preview__right{
+        display: none;
+    }
+    .preview__inner{
+        justify-content: center;
+    }
+    .preview__call{
+        display: none;
+    }
+    @media(max-width:425px){
+        preview__call{
+            display: block;
+        }
+    }
+}
+
+.stocks{
+    background: #3E4245;
+     color: #f5f5f5;
+    font-family: $monts;
+    font-stretch: normal;
+    font-style: normal;
+    padding-bottom: 70px;
+    font-weight: 500;
+    &__title{
+        font-size: 33px;
+        font-weight: 500;
+        line-height: 1.62;
+        letter-spacing: 0.83px;
+        text-align: center;
+        padding-bottom: 70px;
+    }
+    &__item{
+        padding-top: 30px;
+        &:first-child{
+            padding-top: 0px;
+        }
+    }
+    &__name{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    &__description{
+        padding-top: 5px;
+        font-size: 17px;
+        font-style: italic;
+        line-height: 1.6;
+    }
+}
+
 
 
 

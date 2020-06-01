@@ -2768,3 +2768,55 @@ img {
 .active:before {
   transform: rotate(-45deg);
 }
+
+.previewStocks {
+  background: #3E4245;
+}
+.previewStocks .preview__right {
+  display: none;
+}
+.previewStocks .preview__inner {
+  justify-content: center;
+}
+.previewStocks .preview__call {
+  display: none;
+}
+@media (max-width: 425px) {
+  .previewStocks preview__call {
+    display: block;
+  }
+}
+
+.stocks {
+  background: #3E4245;
+  color: #f5f5f5;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  padding-bottom: 70px;
+  font-weight: 500;
+}
+.stocks__title {
+  font-size: 33px;
+  font-weight: 500;
+  line-height: 1.62;
+  letter-spacing: 0.83px;
+  text-align: center;
+  padding-bottom: 70px;
+}
+.stocks__item {
+  padding-top: 30px;
+}
+.stocks__item:first-child {
+  padding-top: 0px;
+}
+.stocks__name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.stocks__description {
+  padding-top: 5px;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.6;
+}
