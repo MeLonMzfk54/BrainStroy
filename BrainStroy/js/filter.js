@@ -32,16 +32,13 @@ $(document).ready(function(){
          rooms = Number($(".filter__input_rooms").val()),
          squareFrom = Number($(".filter__input_square-l").val()),
          squareTo = Number($(".filter__input_square-r").val());
-        console.log(costTo,costFrom,rooms,squareFrom,squareTo);
         let houses = $(".builded__house");
         
             if(squareTo==0){
                 squareTo = 1000000000;
-                console.log(squareTo);
             }
             if(costTo==0){
                 costTo = 1000000000;
-                console.log(costTo);
             }
         for(let i = 0;i<houses.length;i++){
             
@@ -49,7 +46,6 @@ $(document).ready(function(){
                 houseRooms = Number($(houses[i]).find(".builded__rooms").text()),
                 houseCost = Number($(houses[i]).find(".builded__cost").text().split(" ").join("")),
                 houseMat = $(houses[i]).find(".builded__material").text();
-            console.log(houseCost,houseMat,houseRooms,houseSquare);
             
             if($(".filter__wood").hasClass("checked")){ //если wood has checked
                 if(!$(".filter__brick").hasClass("checked")){//если brick hasnt checked
