@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Индивидуальный проект</title>
+    <title>Акции</title>
                     <!--   ИКОНКА НА ВКЛАДКЕ     -->
 <link rel="shortcut icon" href="img/header/brain-icon.png" type="image/png">              
                 <!--   Стили     -->
@@ -19,6 +19,10 @@
 <link rel="stylesheet" href="icomoon-v1.0/ie7/ie7.css">
             <!--Magnific-Popup-->
 <!--<link rel="stylesheet" href="libs/Magnific-Popup-master/Magnific-Popup-master/dist/magnific-popup.css">-->
+<!--       SlickSLider css     -->
+<link rel="stylesheet" href="libs/slick/slick.css">
+<!--       SlickSLider Theme css     -->
+<link rel="stylesheet" href="libs/slick/slick-theme.css">
 </head>
 <body>
 <!--  Wrapper  -->
@@ -31,7 +35,7 @@
      </div>
   </div>
 <!--  Шапка сайта  -->
-      <header class="headerMain headerCalc">
+      <header class="headerMain headerBuilded">
                 <div class="container">
                     <div class="headerMain__inner">
                        <div class="headerMain__inner_up">
@@ -59,12 +63,12 @@
                         <div class="headerMain__inner_down">
                             <ul class="headerMain__menu">
                                 <li class="headerMain__menu-item"><a href="main.html">Главная</a></li>
-                                <li class="headerMain__menu-item"><a href="stocks.html">Акции</a></li>
+                                <li class="headerMain__menu-item"><a href="#">Акции</a></li>
                                 <li class="headerMain__menu-item">
                                 <a href="allProjects.html">Проекты домов</a>
                                 <ul>
-                                        <li><a href="buildedProjects.html">Наши проекты</a></li>
-                                    </ul>
+                                        <li><a href="calculator.html">Индивидуальный проект</a></li>
+                                </ul>
                                 </li>
                                 <li class="headerMain__menu-item"><a href="#">Отзывы</a></li>
                                 <li class="headerMain__menu-item"><a href="#">Построенные объекты</a></li>
@@ -78,7 +82,7 @@
                 </div>
         </header>        
 <!--   Блок превью с временной акцией     -->
-        <section class="preview previewPr previewCalc">
+        <section class="preview  previewStocks">
             <div class="container">
                <div class="preview__inner">
                     <div class="preview__left">
@@ -116,86 +120,72 @@
             </div>
         </section>
 <!--    Контентный блок страницы    -->
-        <section class="calculator">
+        <section class="stocks">
             <div class="container">
-                <div class="calculator__inner">
-                   <div class="calculator__header">
-                        <h1 class="calculator__title">Индивидуальный проект</h1>
-                        <div class="calculator__description">Вы можете сами посчитать примерную стоимость стро- <br>ительства вашего дома, воспользовавшись калькулятором <br>ниже, а также приложить проект вашего дома.</div>
+                <h1 class="stocks__title">Акции</h1>
+                <div class="stocks__inner">
+                    <div class="stocks__item">
+                        <div class="stocks__name stocks__time">Проект дома бесплатно!</div>
+                        <div class="stocks__description">При заказе строительства дома сделаем проект дома бесплатно!</div>
                     </div>
-                    <div class="calculator__content">
-                       <div class="calculator__left">
-                            <h2 class="calculator__name">
-                                Калькулятор стоимости <br>Нового дома
-                            </h2>
-                            <form action="#" class="calculator__form">
-                               <div class="calculator__item">
-                                    <p class="calculator__text">Выберите материал дома</p>
-                                    <input type="radio" name = "material" value="wood" class = "calculator__radio" id = "calculator__wood">
-                                    <label for="calculator__wood"><span class="calculator__case">Брус</span></label>
-                                    <input type="radio" name = "material" value="brick" class = "calculator__radio" id = "calculator__brick">
-                                    <label for="calculator__brick"><span class="calculator__case">Кирпич</span></label>
-                                </div>
-                                <div class="calculator__item one">
-                                    <p class="calculator__text calculator__text_m">Выберите комплектацию дома</p>
-                                  
-                                        <input type="radio" name = "service" value="eco" class = "calculator__radio calculator__radio_r" id="calculator__eco">
-                                        <label for="calculator__eco"><span class="calculator__case calculator__case_m">Эконом</span></label>
-                                        <div class="calculator__subdesc">Строительство коробки: фундамент, стены внутренние и наружные, перекрытие, крыша</div>
-                                   
-                                   
-                                        <input type="radio" name = "service" value="standard" class = "calculator__radio calculator__radio_r" id="calculator__standard">
-                                        <label for="calculator__standard"><span class="calculator__case calculator__case_m">Стандарт</span></label>
-                                        <div class="calculator__subdesc">Вся комплектация эконом + окна, двери, фасад декоративная штукатурка</div>
-                                     
-                                     
-                                        <input type="radio" name = "service" value="premium" class = "calculator__radio calculator__radio_r" id="calculator__premium">
-                                        <label for="calculator__premium"><span class="calculator__case calculator__case_m">Премиум</span></label>
-                                        <div class="calculator__subdesc">Вся комплектация стандарт + электроразводка, водоснабжение, канализация, внутренняя чистовая штукатурка стен и шпаклёвка стен</div>
-                                   
-                                </div>
-                                <div class="calculator__item calculator__item_l">
-                                    <p class="calculator__text calculator__text_last">Выберите площадь дома</p>
-                                    <input type="text" value="0" class="calculator__input" onkeypress="numbersOnly()">
-                                </div>
-                                <div class="calculator__item">
-                                    <span class="calculator__button">Посчитать</span>
-                                </div>
-                            </form>
-                            <p class="calculator__result">Примерная стоимость дома = <span class="calculator__cost">0</span> руб.</p>
-                        </div>
-                        <div class="calculator__right">
-                            <div class="about__formBg">
-                                <div class="about__description">Если у вас есть эскиз вашего будущего дома, то присылайте его к нам на почту <span>brainstroy@mail.ru</span> или заполните форму справа,чтобы мы просмотрели и проконсультировали вас, а также могли связаться с вами в будущем!</div>
-                                <form class="about__form" action="#" method="post" enctype="multipart/form-data">
-                                    <input type="hidden" name="MAX_FILE_SIZE" value="300000">
-                                    <div class="about__input-wrapper">
-                                        <input type="text" class="about__name" placeholder="ваше имя" name="name">
-                                        <span class="icon-name-icon"></span>
-                                    </div>
-                                    <div class="about__input-wrapper">
-                                        <input type="tel" class="about__tel" placeholder="ваш номер телефона" name="telephone">
-                                        <span class="icon-phone-icon"></span>
-                                    </div>
-                                    <div class="about__buttons">
-                                        <div class="input__wrapper">
-                                            <input name="image" type="file" id="input__file" class="about__image">
-                                            <label for="input__file" class="about__btn about__btn-l">
-                                                <span class="input__file-button-text">выберите файл</span>
-                                            </label>
-                                        </div>
-                                        <input type="submit" name="upload" class="form__submit about__btn" value="отправить план">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                    <div class="stocks__item">
+                        <div class="stocks__name stocks__time">Рассрочка 0%</div>
+                        <div class="stocks__description">Заключите договор строительства на любой дом и оформите рассрочку 0%! BrainStroy дарит 36 месяцев рассрочки без комиссии при оплате 50% от стоимости договора!</div>
                     </div>
                 </div>
             </div>
-        </section>    
+        </section>
+        
+              <section class="about">
+            <div class="container">
+              <div class="about__inner">
+               <div class="about__header">
+                <h2 class="about__title_l">Строительная компания “BrainСтрой” - это дружная команда профессионалов</h2>
+                <p class="about__title_r">Мы оказываем полный комплекс услуг по строительству домов, проектированию объектов и снабжению материалами, строящихся объектов. В нашей компании работает дпружный коллектив профес-сионалов.Поэтому в домах, построенных компанией “BrainСтрой” так уютно и хорошо. Обращаясь к нам, вы можете быть уверены, что получите полезную консультацию, улыбку и хорошее настроение! 
+                </p>
+                </div>
+                <div class="about__formBg">
+                    <div class="about__description">Если у вас есть эскиз вашего будущего дома, то присылайте его к нам на почту <span>brainstroy@mail.ru</span> или заполните форму справа,чтобы мы просмотрели и проконсультировали вас, а также могли связаться с вами в будущем!</div>
+                    <form class="about__form" action="#" method="post" enctype="multipart/form-data">
+                       <input type="hidden" name="MAX_FILE_SIZE" value="300000">
+                       <div class="about__input-wrapper">
+                        <input type="text" class="about__name" placeholder="ваше имя" name="name">
+                        <span class="icon-name-icon"></span>
+                        </div>
+                        <div class="about__input-wrapper">     
+                        <input type="tel" class="about__tel" placeholder="ваш номер телефона" name="telephone">
+                        <span class="icon-phone-icon"></span>
+                        </div>
+                        <div class="about__buttons">
+                            <div class="input__wrapper">
+                               <input name="image" type="file" id="input__file" class="about__image">
+                               <label for="input__file" class="about__btn about__btn-l">
+                                  <span class="input__file-button-text">выберите файл</span>
+                               </label>
+                            </div>
+                            <input type="submit" name="upload" class="form__submit about__btn" value="отправить план" >
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="container__about">
+            <div class="about__lower">
+                <div class="about__txtVideo">Видео о нашей работе</div>
+                <div class="about__sub">
+                    <a href="https://www.youtube.com/channel/UCEjA5F8lg5ntTbS7WDeRDFA/videos" id="about__subscribe" target="_blank" class="about__subscribe">Подписаться на канал</a>
+                    <span class="icon-youtube-icon"></span>
+                </div>
+            </div>
+            <div class="about__video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/f7IAdimPzVo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            </div>
+                </div>
+            </div>
+        </section>
         
 <!--   Подвал сайта     -->
-        <footer class="footer footerCalc" id="Contacts">
+        <footer class="footer" id="Contacts">
             <div class="container">
                 <div class="footer__inner">
                     <div class="footer__upper">
@@ -205,8 +195,8 @@
                         </div>
                         <ul class="footer__menu">
                             <li class="footer__item"><a class="footer__link" href="main.html">Главная</a></li>
-                            <li class="footer__item"><a class="footer__link" href="stocks.html">Акции</a></li>
-                            <li class="footer__item"><a class="footer__link" href="buildedProjects.html">Проекты домов</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Акции</a></li>
+                            <li class="footer__item"><a class="footer__link" href="#">Проекты домов</a></li>
                             <li class="footer__item"><a class="footer__link" href="#">Отзывы</a></li>
                             <li class="footer__item"><a class="footer__link" href="#">Построенные объкеты</a></li>
                         </ul>
@@ -249,11 +239,15 @@
         </div>
 <!--   Jquery     -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+<!--  Jquery Migrate  -->
+    <script src="http://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
+<!--  SlickSlider  -->
+   <script src="libs/slick/slick.min.js"></script>
     <!--  Скрипты для кнопок  -->
     <script src="js/buttons.js"></script>
     <!--  Скрипт шапки, загрузочного экрана и некоторых кнопок  -->
     <script src="js/header.js"></script>
-<!--  Скрипт калькулятора  -->
-    <script src="js/calculator.js"></script>
+<!--  Скрипт слайдера  -->
+    <script src="js/slider.js"></script>
 </body>
 </html>
