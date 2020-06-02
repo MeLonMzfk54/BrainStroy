@@ -237,7 +237,7 @@
                 </div>
                 <div class="about__formBg">
                     <div class="about__description">Если у вас есть эскиз вашего будущего дома, то присылайте его к нам на почту <span>brainstroy@mail.ru</span> или заполните форму справа,чтобы мы просмотрели и проконсультировали вас, а также могли связаться с вами в будущем!</div>
-                    <form class="about__form" action="#" method="post" enctype="multipart/form-data">
+                    <form  enctype="multipart/form-data" method="post"  class="about__form" id="aboutForm" >
                        <input type="hidden" name="MAX_FILE_SIZE" value="300000">
                        <div class="about__input-wrapper">
                         <input type="text" class="about__name" placeholder="ваше имя" name="name">
@@ -344,5 +344,7 @@
     <script src="js/buttons.js"></script>
 <!--  Скрипт шапки, загрузочного экрана и некоторых кнопок  -->
     <script src="js/header.js"></script>
+<!--  Скрипт для отправки формы  -->
+    <script src="js/forms.js"></script>
 </body>
 </html>
