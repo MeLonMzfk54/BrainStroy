@@ -318,12 +318,19 @@
         <!--   Вылетающий экран, при нажатии на кнопку по типу заказть звонок     -->
     <div class="popup">
            <h3 class="popup__title">Заказать звонок</h3>
-            <form action="" id = "popupId" class="popup__form">
+            <form  id = "popupId" class="popup__form">
                 <input type="text" class="popup__name" name="pName" placeholder="Ваше имя">
                 <input type="text" class="popup__tel" placeholder="Ваш номер телефона" name="pTel">
                 <input type="submit" class="popup__submit" name="pSubmit" value = "Отправить">
             </form>
         </div>     
+<!--     Окно после отправки формы   -->
+    <div class="overlay">
+        <div class="overlay__popup">
+           <div class="overlay__close"></div>
+            <h2 class="overlay__title">Готово!</h2>
+        </div>
+    </div>
 <!--    Фон этого экрана    -->
         <div class="popup__bg"></div>
     </div>
