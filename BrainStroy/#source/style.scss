@@ -2445,6 +2445,136 @@ margin: -16px 0 0 -16px;
     }
 }
 
+.headerHouse{
+    background: #9AA39B;
+    .icon-contacts-icon{
+        color: #fff;
+    }
+    hr{
+        background: black;
+    }
+}
+
+.house{
+   background:  #CDD7CC;
+     color: #f5f5f5;
+    font-family: $monts;
+    font-stretch: normal;
+    font-style: normal;
+    padding: 70px 0px;
+    font-weight: 500;
+    .builded__text{
+        &:last-child{
+            padding-top: 0px;
+        }
+    }
+    .builded__house{
+        color: #f9f9f9;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__cost{
+        width: 350px;
+        height: 250px;
+        background: #393648;
+        display: flex;
+       justify-content: space-around;
+        text-align: center;
+        flex-direction: column;
+    }
+    &__price{
+        line-height: 1.5;
+        font-size: 16px;
+        padding: 5px;
+        p{
+            font-size: 20px;
+            color: #FFE7A1;
+        }
+    }
+    &__btn{
+        a{
+            color: black;
+            background: #FFE7A1;
+            padding: 10px 5px;
+        }
+    }
+    .builded__slider{
+        border: 4px solid #393648;
+    }
+    &__comp{
+        padding-top: 50px;
+    }
+    &__name{
+        font-size: 30px;
+        padding-bottom: 10px;
+    }
+    &__images{
+        display: flex;
+        img{
+            margin-left: 15px;
+            border: 5px solid #FFE7A1;
+           width: 400px;
+            &:first-child{
+                margin-left: 0px;
+            }
+        }
+    }
+    &__description{
+        width: 819px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__text{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 16px;
+        color: #393648;
+        font-weight: bold;
+        &:first-child{
+            margin-top: 50px;
+        }
+        &:nth-child(even){
+            background-color: #FFE7A1;
+        }
+    }
+    @media(max-width:977px){
+        &__block{
+            flex-direction: column;
+        }
+    }
+    @media(max-width:851px){
+        &__name{
+            text-align: center;
+        }
+        &__images{
+            flex-direction: column;
+            align-items: center;
+            img{
+                margin-left: 0px;
+                margin-top: 10px;
+            }
+        }
+        &__description{
+            width: 100%;
+        }
+    }
+    @media(max-width:439px){
+        &__images{
+            img{
+                width: 300px;
+            }
+        }
+    }
+}
+
+
 
 
 
