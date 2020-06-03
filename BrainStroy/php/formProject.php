@@ -25,7 +25,12 @@ else{
  imagedestroy($src_img);
  return true;
  }
-    $name = trim($_POST["name"]); // имя в форме с файлом
+ $conn = mysqli_connect("localhost","mysql","mysql") or die ("Нет соединения: ". mysqli_error());
+    echo "Удачно соединено!";
+    mysqli_select_db($conn,"brainstroy");
+
+//if(isset($_POST["upload"]) || isset($_POST["upload-1"])){
+     $name = trim($_POST["name"]); // имя в форме с файлом
     $tel = trim($_POST["telephone"]); // телефон в форме с файлом
 
         
@@ -38,11 +43,12 @@ else{
         exit();
     }
 
-    if(!empty(($_FILES['image']['tmp_name']))) $project = addslashes(file_get_contents($_FILES['image']['tmp_name']));
+//    if(!empty(($_FILES['image']['tmp_name']))) $project = addslashes(file_get_contents($_FILES['image']['tmp_name']));
         
     if(!resizeimg($image,$smallImage,133,100)){
         echo "Ошибка при создании уменьшеной копии изображения";
     }
 
     $conn -> query("INSERT INTO проектыклиентов (имя,телефон,большойПуть,маленькийПуть,проект) VALUES ('$name','$tel','$image','$smallImage','$image')");
+
 ?>
