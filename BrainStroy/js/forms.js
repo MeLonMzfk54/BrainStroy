@@ -24,29 +24,31 @@ $(document).ready(function(){
        return valId;
    }
         
-    let formData = $(this).serialize();
+    let data = new FormData(this);
+       
     $.ajax({
         type: "POST",
         enctype: 'multipart/form-data',
         url: "php/formProject.php",
-        data: formData,
+        data: data,
         async: false,
         cache: false,
         contentType: false,
         processData: false,
-        success:function(){
-             alert(formData);
-         $(".overlay").fadeIn();
+//        success:function(data){
+//            alert(data.getAll());
+//         $(".overlay").fadeIn();
+//            $(this).find("input").val("");
+//            $("#aboutForm").trigger("reset");
+//        },
+//        error: function(){
+//            alert("Ошибка в форме, обрабатываемой ajax");
+//        }
+    }).done(function(){
+            $(".overlay").fadeIn();
             $(this).find("input").val("");
             $("#aboutForm").trigger("reset");
-        },
-        error: function(){
-            alert("Ошибка в форме, обрабатываемой ajax");
-        }
     });
-//        .done(function(){
-//       
-//    });
     return false;
 });
 });
