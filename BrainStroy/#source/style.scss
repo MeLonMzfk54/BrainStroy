@@ -1,4 +1,4 @@
-@import "null.scss";
+﻿@import "null.scss";
 
 @import "header.scss";
 
@@ -532,7 +532,7 @@ font-size:11px;
         padding-left: 0px;
         padding-top: 40px;
         a{
-           font-size: 28px;
+           font-size: 18px;
             color: #FFCB57;
             &:hover{
                 color: #fff;
@@ -1814,11 +1814,18 @@ margin: -16px 0 0 -16px;
                 background-color: #FFE7A1;
             }
             &.active:before{
+                width: 7px;
+                height: 2px;
+                 right: 0px;
+                top: 10px;
                 transform: rotate(-45deg);
                 
             }
             &.active:after{
-                
+                width: 7px;
+                height: 2px;
+                right: -5px;
+                top: 10px;
                 transform: rotate(45deg);
             }
             &.active{
@@ -2632,6 +2639,120 @@ margin: -16px 0 0 -16px;
     }
 }
 
+/*Построенные объекты*/
+.ourBuilded{
+    padding: 70px 0px;
+    background-color: #97A49B;
+    font-family: $sans;
+    &__inner{}
+    &__title{
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+/*Отзывы*/
+.review{
+    font-family: $monts;
+    background-color: #66736A;
+    padding: 70px 0px;
+    &__inner{}
+    &__upper{}
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+    &__title{
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        padding-bottom: 40px;
+    }
+    &__input{
+        color: white;
+        align-self: center;
+        width: 250px;
+        background-color: transparent;
+        border-bottom: 2px solid white;
+        padding: 5px;
+        &::placeholder{
+            color: white;
+        }
+    }
+    input[type=text]{
+        margin-top: 20px;
+    }
+    
+    &__text{
+        margin-top: 50px;
+        align-self: center;
+        width: 400px;
+        background-color: transparent;
+        border: 2px solid white;
+        padding: 10px;
+        color: white;
+        resize: none;
+        &::placeholder{
+            color: white;
+        }
+    }
+    &__lower{
+        margin-top: 50px;
+    }
+    &__subtitle{
+        color: white;
+        text-align: center;
+        font-size: 20px;
+    }
+    &__block{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        &:first-child{
+            margin-top: 0px;
+        }
+    }
+    &__name{
+        font-size: 17px;
+        color: #FFE7A1;
+    }
+    &__content{
+        color: white;
+        
+    }
+    &__project{
+        margin: 0px 30px 0px 10px;
+        color: wheat;
+    }
+    &__submit{
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 20px;
+        cursor: pointer;
+        background-color: #FFE7A1;
+        padding: 8px 4px;
+    }
+    @media(max-width:600px){
+        &__text{
+            width: 300px;
+        }
+        &__item{
+            border: 2px solid #FFE7A1;
+            padding: 10px;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__project{
+            padding: 10px 0px;
+        }
+    }
+    
+}
 
 
 

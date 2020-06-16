@@ -69,8 +69,8 @@
                                         <li><a href="calculator.html">Индивидуальный проект</a></li>
                                     </ul>
                                 </li>
-                                <li class="headerMain__menu-item"><a href="#">Отзывы</a></li>
-                                <li class="headerMain__menu-item"><a href="#">Построенные объекты</a></li>
+                                <li class="headerMain__menu-item"><a href="review.php">Отзывы</a></li>
+                                <li class="headerMain__menu-item"><a href="ourBuildedProjects.html">Построенные объекты</a></li>
                             </ul>
                             <div class="headerMain__contacts">
                                 <div class="headerMain__contacts_icon"><span class="icon-contacts-icon"></span></div>
@@ -79,7 +79,45 @@
                         </div>
                     </div>
                 </div>
-        </header>        
+        </header>   
+        <!--   Блок превью с временной акцией     -->
+        <section class="preview previewPr previewCalc">
+            <div class="container">
+               <div class="preview__inner">
+                    <div class="preview__left">
+                            <div class="preview__left_l">
+                                <div class="preview__title">
+                                    строительство домов под ключ в Новосибирске
+                                </div>
+                                <div class="preview__button"><a href="allProjects.html">Проекты</a></div>
+                                <div class="preview__button preview__call"><a href="#">Заказать звонок</a></div>
+                            </div>
+                            <div class="preview__left_r">
+                                <div class="preview__pluses">
+                                    <div class="preview__pluses_item">
+                                        <div class="preview__icon"><span class="icon-people-icon"></span></div>
+                                        <div class="preview__text">Более 2000 счастливых людей проживают в домах, построенных нашей компанией</div>
+                                    </div>
+                                    <div class="preview__pluses_item">
+                                        <div class="preview__icon"><span class="icon-key-icon"></span></div>
+                                        <div class="preview__text">ПОСТРОИМ ВАШ ДОМ ПОД КЛЮЧ, ПРЕДОСТАВИВ ПОЛНЫЙ КОМПЛЕС УСЛУГ</div>
+                                    </div>
+                                    <div class="preview__pluses_item">
+                                        <div class="preview__icon"><span class="icon-crown-icon"></span></div>
+                                        <div class="preview__text">20 лет на рынке!</div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="preview__right">
+                        <div class="preview__discount">Акция!</div>
+                        <div class="preview__banner">Проект дома <span>бесплатно</span></div>
+                        <div class="preview__desc">при заказе строительства дома сделаем проект дома бесплатно!</div>
+                        <div class="discount__btn btn__discount"><a class="preview__btn" href="#popupId">Подать заявку</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>     
 
 <!--    Контентный блок страницы    -->
         <section class="house">
@@ -210,5 +248,7 @@
 <script src="js/slider.js"></script>
 <!--  Скрипт для отправки формы  -->
     <script src="js/forms.js"></script>
+    <!--  Маски  -->
+    <script src="js/jquery.maskedinput.js"></script>
 </body>
 </html>
