@@ -1,9 +1,12 @@
+<?php  $conn = mysqli_connect("localhost","mysql","mysql") or die ("Нет соединения: ". mysqli_error());
+//    echo "Удачно соединено!";
+    mysqli_select_db($conn,"brainstroy");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Проект ДД-1 с площадью 118 за 3 356 400 руб от компании BrainСтрой</title>
+    <title>Отзывы</title>
                     <!--   ИКОНКА НА ВКЛАДКЕ     -->
 <link rel="shortcut icon" href="img/header/brain-icon.png" type="image/png">              
                 <!--   Стили     -->
@@ -17,10 +20,8 @@
             <!--   Иконки   -->
 <link rel="stylesheet" href="icomoon-v1.0/font.css">
 <link rel="stylesheet" href="icomoon-v1.0/ie7/ie7.css">
-<!--       SlickSLider css     -->
-<link rel="stylesheet" href="libs/slick/slick.css">
-<!--       SlickSLider Theme css     -->
-<link rel="stylesheet" href="libs/slick/slick-theme.css">
+            <!--Magnific-Popup-->
+<!--<link rel="stylesheet" href="libs/Magnific-Popup-master/Magnific-Popup-master/dist/magnific-popup.css">-->
 </head>
 <body>
 <!--  Wrapper  -->
@@ -33,7 +34,7 @@
      </div>
   </div>
 <!--  Шапка сайта  -->
-      <header class="headerMain headerHouse">
+      <header class="headerMain headerCalc">
                 <div class="container">
                     <div class="headerMain__inner">
                        <div class="headerMain__inner_up">
@@ -66,11 +67,10 @@
                                 <a href="allProjects.html">Проекты домов</a>
                                 <ul>
                                         <li><a href="buildedProjects.html">Наши проекты</a></li>
-                                        <li><a href="calculator.html">Индивидуальный проект</a></li>
                                     </ul>
                                 </li>
                                 <li class="headerMain__menu-item"><a href="review.php">Отзывы</a></li>
-                                <li class="headerMain__menu-item"><a href="ourBuildedProjects.html">Построенные объекты</a></li>
+                                <li class="headerMain__menu-item"><a href="#">Построенные объекты</a></li>
                             </ul>
                             <div class="headerMain__contacts">
                                 <div class="headerMain__contacts_icon"><span class="icon-contacts-icon"></span></div>
@@ -79,8 +79,8 @@
                         </div>
                     </div>
                 </div>
-        </header>    
-        <!--   Блок превью с временной акцией     -->
+        </header>        
+<!--   Блок превью с временной акцией     -->
         <section class="preview previewPr previewCalc">
             <div class="container">
                <div class="preview__inner">
@@ -117,69 +117,40 @@
                     </div>
                 </div>
             </div>
-        </section>    
-
-<!--    Контентный блок страницы    -->
-        <section class="house">
-           <div class="container">
-               <div class="house__inner">
-                   <div class="house__block">
-                       <div class="builded__house d-1">
-                           <div class="builded__left">
-                               <h3 class="builded__name">ДД-1</h3>
-                               <div class="builded__slider">
-                                   <div class="builded__img"><img src="img/builded/dd-1.png" alt="dd-1"></div>
-                                   <div class="builded__img"><img src="img/builded/dd-1.2.png" alt="dd-1"></div>
-                                   <div class="builded__img"><img src="img/builded/dd-1.3.jpg" alt="dd-1"></div>
-                                   <div class="builded__img"><img src="img/builded/dd-1.4.jpg" alt="dd-1"></div>
+        </section>
+<!--     Контентная часть     -->
+           <section class="review">
+               <div class="container">
+                   <div class="review__inner">
+                       <div class="review__upper">
+                          <div class="review__title">Здесь вы можете оставить отзыв</div>
+                           <form class="review__form" id="reviewForm">
+                               <input type="text" class="review__input review__input_name" name="reviewName" placeholder="Введите ваше имя">
+                               <input type="text" class="review__input review__input_key" name="reviewKey" placeholder="Номер договора">
+                               <textarea rows="10" cols="45" class="review__text" name="reviewText" placeholder="Напишите отзыв"></textarea>
+                               <input type="submit" name="reviewSubmit" class="review__submit">
+                           </form>
+                       </div>
+                       <div class="review__lower">
+                           <div class="review__subtitle">Отзывы</div>
+                           <div class="review__block">
+                              <?php $sql = "SELECT * FROM отзывы where одобрен = 'да'";
+                               $result = mysqli_query($conn,$sql);
+                               $reviews = mysqli_fetch_all($result,MYSQLI_ASSOC);
+                               foreach($reviews as $review){
+                               ?>
+                               <div class="review__item">
+                                   <div class="review__name"><?php echo $review['имя']; ?></div>
+                                   <div class="review__project">проект - <span><?php echo $review['проект']; ?></span></div>
+                                   <div class="review__content"><?php echo $review['отзыв']; ?></div>
                                </div>
+                               <?php } ?>
                            </div>
-                           <div class="builded__right">
-                               <div class="builded__parametrs">Описание дома</div>
-                               <div class="builded__description">
-                                   <div class="builded__text">Общая площадь - <span class="builded__square">118</span>м²</div>
-                                   <div class="builded__text">Жилых комнат - <span class="builded__rooms">3</span></div>
-                                   <div class="builded__text">Комлпектация - <span class="builded__class">стандарт</span></div>
-                                   <div class="builded__text">Материал - <span class="builded__material">брус</span></div>
-                               </div>
-                           </div>
-                       </div>
-                       <div class="house__cost">
-                           <div class="house__price">Примерна стоимость <br>строительства дома:  <p>3 365 400 руб</p>Чтобы узнать точную сумму, <br> отправьте нам заявку на расчёт</div>
-                           <div class="house__btn"><a href="#1">Отправить заявку</a></div>
-                       </div>
-                   </div>
-                   <div class="house__comp">
-                       <div class="house__name">Комлпектация</div>
-                       <div class="house__images">
-                           <img src="img/house/dd-1-comp.jpg" alt="dd-1Comp">
-                           <img src="img/house/dd-1-comp2.jpg" alt="dd-1Comp">
-                       </div>
-                       <div class="house__description">
-                           <div class="house__text"><span>1 прихожая</span> <span>6,25 м²</span></div>
-                           <div class="house__text"><span>2 коридор </span><span>5,1 м²</span></div>
-                           <div class="house__text"><span>3 кухня </span><span>13,27 м²</span></div>
-                           <div class="house__text"><span>4 гостиная </span><span>22,24 м²</span></div>
-                           <div class="house__text"><span>5 туалет </span><span>3,42 м²</span></div>
-                           <div class="house__text"><span>6 гардероб </span><span>2,29 м²</span></div>
-                           <div class="house__text"><span>7 котельная </span><span>5,97 м²</span></div>
-                           <div class="house__text"><span>8 гараж на одну машину </span><span>19,42 м²</span></div>
-                           <div class="house__text"><span>Общая площадь </span><span>77,96 м²</span></div>
-                           <div class="house__text"><span>1 коридор </span><span>9,63 м² (12,16 м²)</span></div>
-                           <div class="house__text"><span>2 ванная комната </span><span>19,95 м² (12,93 м²)</span></div>
-                           <div class="house__text"><span>3 комната </span><span>17,42 м² (21,51 м²)</span></div>
-                           <div class="house__text"><span>4 комната </span><span>15,19 м² (19,28 м²)</span></div>
-                           <div class="house__text"><span>5 комната </span><span>9,74 м² (11,92 м²)</span></div>
-                           <div class="house__text"><span>6 гардероб </span><span>3,77 м² (5,21 м²)</span></div>
-                           <div class="house__text"><span>Общая площадь </span><span>65,7 м² (83,01 м²)</span></div>
                        </div>
                    </div>
                </div>
-           </div>
-        </section>
-        
-<!--   Подвал сайта     -->
-        <footer class="footer footerHouse" id="Contacts">
+           </section>
+            <footer class="footer footerCalc" id="Contacts">
             <div class="container">
                 <div class="footer__inner">
                     <div class="footer__upper">
@@ -240,19 +211,17 @@
         </div>
 <!--   Jquery     -->
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-    <!--  Jquery Migrate  -->
-    <script src="http://code.jquery.com/jquery-migrate-3.3.0.min.js"></script>
-    <!--  SlickSlider  -->
-   <script src="libs/slick/slick.min.js"></script>
     <!--  Скрипты для кнопок  -->
     <script src="js/buttons.js"></script>
     <!--  Скрипт шапки, загрузочного экрана и некоторых кнопок  -->
     <script src="js/header.js"></script>
-<!--  Скрипт слайдера  -->
-<script src="js/slider.js"></script>
-<!--  Скрипт для отправки формы  -->
+<!--  Скрипт калькулятора  -->
+    <script src="js/calculator.js"></script>
+    <!--  Скрипт для отправки формы  -->
     <script src="js/forms.js"></script>
     <!--  Маски  -->
     <script src="js/jquery.maskedinput.js"></script>
+<!--  review.js  -->
+<script src="js/review.js"></script>
 </body>
 </html>

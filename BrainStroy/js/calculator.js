@@ -2,15 +2,14 @@ $(document).ready(function(){
    $('.calculator__text_m').click(function(event){
        if($('.calculator__item').hasClass('one')){
            $('.calculator__text_m').not($(this)).removeClass('active');
-           $('.calculator__subdesc').not($(this).next()).slideToggle(300);
+           $('.calculator__subdesc').not($(this).next(".calculator__subdesc")).slideToggle(300);
        }
-       $(this).toggleClass("active").next().slideToggle(300);
+       $(this).toggleClass("active");
    });
     $(".calculator__button").click(function(){
         let valueMat = $(".calculator__radio:checked").val(); // материал
         let valueKomp = $(".calculator__radio_r:checked").val(); // комплектация
         let valueSquare = $(".calculator__input").val(); // площадь
-//        alert(valueMat); alert(valueKomp);alert(valueSquare);
         if(valueMat == "wood"){
             if(valueKomp == "eco"){
                 let result = valueSquare * 19000;

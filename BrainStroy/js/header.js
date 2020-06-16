@@ -51,5 +51,4 @@ $('#toTop').click(function() {
     $('*').animate({scrollTop:0},500);
 });
 
-
 });

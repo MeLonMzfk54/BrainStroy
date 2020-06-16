@@ -66,8 +66,8 @@
                                         <li><a href="buildedProjects.html">Наши проекты</a></li>
                                     </ul>
                                 </li>
-                                <li class="headerMain__menu-item"><a href="#">Отзывы</a></li>
-                                <li class="headerMain__menu-item"><a href="#">Построенные объекты</a></li>
+                               <li class="headerMain__menu-item"><a href="review.php">Отзывы</a></li>
+                                <li class="headerMain__menu-item"><a href="ourBuildedProjects.html">Построенные объекты</a></li>
                             </ul>
                             <div class="headerMain__contacts">
                                 <div class="headerMain__contacts_icon"><span class="icon-contacts-icon"></span></div>
@@ -170,11 +170,11 @@
                                 <form class="about__form" id="aboutForm" method="post" enctype="multipart/form-data">
                                     <input type="hidden" name="MAX_FILE_SIZE" value="300000">
                                     <div class="about__input-wrapper">
-                                        <input type="text" class="about__name" placeholder="ваше имя" name="name">
+                                        <input type="text" class="about__name" placeholder="ваше имя" name="pName">
                                         <span class="icon-name-icon"></span>
                                     </div>
                                     <div class="about__input-wrapper">
-                                        <input type="tel" class="about__tel" placeholder="ваш номер телефона" name="telephone">
+                                        <input type="tel" class="about__tel" placeholder="ваш номер телефона" name="pTel">
                                         <span class="icon-phone-icon"></span>
                                     </div>
                                     <div class="about__buttons">
@@ -264,5 +264,7 @@
     <script src="js/calculator.js"></script>
     <!--  Скрипт для отправки формы  -->
     <script src="js/forms.js"></script>
+    <!--  Маски  -->
+    <script src="js/jquery.maskedinput.js"></script>
 </body>
 </html>
